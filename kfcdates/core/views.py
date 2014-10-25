@@ -8,7 +8,7 @@ import json
 # Create your views here.
 def login(request):
     context = RequestContext(request)
-
+    print request.user
     return render_to_response('core/login.html', context)
 
 def home(request):

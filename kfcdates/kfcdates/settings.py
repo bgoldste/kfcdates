@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_facebook',
     'core',
+    'social.apps.django_app.default',
    
 )
 
@@ -48,11 +49,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware'
 )
 
 AUTHENTICATION_BACKENDS = (
+     'django_facebook.auth_backends.FacebookBackend',
+    'social.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-    'django_facebook.auth_backends.FacebookBackend',
+   
 )
 
 ROOT_URLCONF = 'kfcdates.urls'
@@ -99,6 +103,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
     'django_facebook.context_processors.facebook',
+     'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
 )
 
 
@@ -107,7 +113,7 @@ TEMPLATE_DIRS = (
 )
 
 
-AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+#AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
 
 ROOT_URLCONF = 'kfcdates.urls'
 
@@ -130,5 +136,37 @@ FACEBOOK_APP_ID = '281620288706422'
 FACEBOOK_APP_SECRET = 'abfd4b59048317f3e368c048c4eb0e80'
 
 FACEBOOK_DEFAULT_SCOPE = ['email', 'user_likes']
+
+
+
+
+
+
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'social.pipeline.social_auth.associate_by_email',
+    'social.pipeline.user.create_user',
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
+    
+)
+
+SOCIAL_AUTH_DISCONNECT_PIPELINE = (
+    'social.pipeline.disconnect.allowed_to_disconnect',
+    'social.pipeline.disconnect.get_entries',
+    'social.pipeline.disconnect.revoke_tokens',
+    'social.pipeline.disconnect.disconnect',
+)
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '749647048440929'
+SOCIAL_AUTH_FACEBOOK_SECRET = '66b1e8afe87bd8f056ce66c5124a20d7'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['user_likes', 'email',  ]
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
 
 

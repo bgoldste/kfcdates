@@ -36,7 +36,8 @@
             {% csrf_token %}
             <input class="button facebook" onclick="F.connect(this.parentNode); return false;" value="show me"/>
         </form>        
-        <h5 ><span class="lock"></span>Totally Anonymous. Always.</h5>      
+        <h5 ><span class="lock"></span>Totally Anonymous. Always.</h5>  
+        <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>    
       </div>
     </div>
   </body>
