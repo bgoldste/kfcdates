@@ -8,7 +8,20 @@ import json
 # Create your views here.
 def login(request):
     context = RequestContext(request)
-    print request.user
+
+
+    for a in request.user.social_auth.values():
+    	if a['provider'] == 'facebook':
+    		print a['uid']
+
+
+
+    context['user'] = request.user.social_auth.values
+    print dir(request.user)
+
+   	
+    context['list'] = dir(request.user.social_auth)
+
     return render_to_response('core/login.html', context)
 
 def home(request):
