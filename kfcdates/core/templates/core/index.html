@@ -90,15 +90,15 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="setup">
-
+  <h4 class ='text-center' style ='color:gray;'>Setup a meeting</h4>
     <div id="date-map"></div>
-    <br/>
+    
     {{slot.kfcAddress}}
-    <br/>
+    <br>
     {{eui-selectdate style="default" placeholder="Select a date" value=slot.moment}}
     {{eui-select placeholder='Select a time' options=times value=slot.time}}
-    <br/><br/>
-    {{eui-button label='invite' action='invite' style='primary' disabled=isDisabled}}
+   
+    {{eui-button label='invite' action='invite' style='primary' }}
   </script>
 
 
