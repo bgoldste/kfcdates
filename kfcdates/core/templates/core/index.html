@@ -44,11 +44,11 @@
 
   <script type="text/x-handlebars" data-template-name="profile">
    <h1>profile</h1>
-   <p>{{firstObject.firstname}} {{firstObject.lastname}}</p>
+   <p>{{user.firstname}} {{user.lastname}}</p>
 
-   <p><img {{bind-attr src=firstObject.photoURL}}/></p>
+   <p><img {{bind-attr src=user.photoURL}}/></p>
    <p>radio select 
-   {{#if firstObject.isBuyer}}
+   {{#if user.isBuyer}}
     <button>Buyer OK</button>
     <button {{action 'makeRecipient'}}>Recipient NO</button>
     {{#link-to 'setup'}}Next{{/link-to}}

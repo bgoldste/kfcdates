@@ -119,7 +119,12 @@ App.User.reopenClass({
 
 App.ProfileRoute = Ember.Route.extend({
 	model: function() {
-		return this.store.find('user', {id: null});
+		return Ember.RSVP.hash({
+			users: this.store.find('user', {id: null})
+		});
+	},
+	afterModel: function (model) {
+		model.user = model.users.get('firstObject');
 	}
 });
 
