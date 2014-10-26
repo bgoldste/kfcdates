@@ -42,7 +42,7 @@ def login(request):
         for a in request.user.social_auth.values():
             if a['provider'] == 'facebook':
                 
-                    mongo_user = db.users.find_one({"uid": a['uid'] })
+                    mongo_user = db.users.find_one({"facebookID": a['uid'] })
                     if not mongo_user:
                         gender = get_user_gender(request.user.first_name)
                         is_buyer = False,
