@@ -281,7 +281,7 @@ App.WaitingRoute = Ember.Route.extend({
 		if (model && model.content && model.content.length > 0)
 			this.transitionTo('confirmation'); 
 		else {
-			setTimeout("location.reload(true);", 30000);
+			setTimeout("location.reload(true);", 3000);
 		}
 	}
 });
