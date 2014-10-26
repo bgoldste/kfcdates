@@ -213,6 +213,8 @@ def proposals(request):
                     #kfc_date = db.dates.find_one({"_id" : date_id})
                     #data = json.dumps(kfc_date)
                     #return HttpResponse(data, mimetype='application/json')
+                    message = "You are confirmed for a date on " + kfc_date['date'] + ' - ' + kfc_date['time'] + " at " + kfc_date['address']
+                    confirmation_email('Date Confirmation', message , kfc_date['buyer'], kfc_date['recipient'])
                     return HttpResponse(status=200);
         except AttributeError:
             pass
