@@ -254,8 +254,27 @@ App.ProposalController = Ember.ArrayController.extend({
 			proposal = this.store.getById('proposal',id);
 			proposal.set('state','accepted');
 			proposal.save();
-			this.transitionTo('confirmation'); 
+			this.transitionToRoute('confirmation'); 
 		}
+	}
+});
+
+App.WaitingRoute = Ember.Route.extend({
+	model: function() {
+		return this.store.find('date');
+	},
+	afterModel: function(model) {
+		if (model && model.content && model.content.length > 0)
+			this.transitionTo('confirmation'); 
+		else {
+			setTimeout("location.reload(true);", 30000);
+		}
+	}
+});
+
+App.ConfirmationRoute = Ember.Route.extend({
+	model: function() {
+		//return this.store.find('date');
 	}
 });
 

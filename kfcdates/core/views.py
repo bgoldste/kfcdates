@@ -290,7 +290,7 @@ def dates(request):
                 except:
                     kfc_date['recipient'] = []
                     pass
-                data = json.dumps(kfc_date)
+                data = json.dumps({'dates' : [kfc_date]})
                 return HttpResponse(data, mimetype='application/json')
     return HttpResponse(status=200);
 
