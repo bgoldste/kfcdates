@@ -114,14 +114,20 @@
 
   <script type="text/x-handlebars" data-template-name="confirmation">
     <h3 class= 'text-center' style='color:grey;'>You're Set for your Date!</h3>
+    {{date.date}} @ {{date.time}} 
+    <br/><br/>
+    {{date.address}}
+     {{#each b in date.buyer}}
+     	<img style = "height:60px; width: 60:px;" {{bind-attr src=b.photoURL}}/>
+     	{{b.firstname}}
+     {{/each}}
+     {{#each b in date.recipient}}
+     	<img style = "height:60px; width: 60:px;" {{bind-attr src=b.photoURL}}/>
+     	{{b.firstname}}
+     {{/each}}
     <img class ='center-block' src ="static/img/confirmation.png">
     <br><br>
     <h2 class ='text-center' style="color:red;">Yum!</h2>
-    youre set for the date!
-    location
-    date
-    time
-    ok
   </script>
 
   <script type="text/x-handlebars" data-template-name="date">

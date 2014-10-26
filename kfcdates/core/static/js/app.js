@@ -274,7 +274,12 @@ App.WaitingRoute = Ember.Route.extend({
 
 App.ConfirmationRoute = Ember.Route.extend({
 	model: function() {
-		//return this.store.find('date');
+		return Ember.RSVP.hash({
+			dates: this.store.find('date')
+		});
+	},
+	afterModel: function(model) {
+		model.date = model.dates.get('firstObject');
 	}
 });
 
