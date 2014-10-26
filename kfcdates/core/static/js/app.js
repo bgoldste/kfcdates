@@ -10,14 +10,14 @@ Ember.Application.initializer({
 App = Ember.Application.create();
 
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://kfc.fastfooddates.com'
+    host: 'http://localhost:8000'
 });
 
 //App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
 App.ApplicationStore = DS.Store.extend({
   revision: 11,
-  url: "http://kfc.fastfooddates.com"
+  url: "http://localhost:8000"
 });
 
 
@@ -265,7 +265,7 @@ App.ProposalController = Ember.ObjectController.extend({
 			proposal = this.store.getById('proposal',id);
 			proposal.set('state','accepted');
 			proposal.save();
-			Ember.run.later(myContext, function() {
+			Ember.run.later(_this, function() {
 				_this.transitionToRoute('confirmation');   
 			}, 750);
 			
