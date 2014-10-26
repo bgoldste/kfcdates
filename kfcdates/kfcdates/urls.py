@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'core.views.logout', name='logout'),
     url(r'^home/$', 'core.views.home', name='home'),
 	url(r'^index/$', 'core.views.index', name='home'),
-	url(r'^users/([0-9])$', 'core.views.test_users', name='home'),
+	url(r'^users', 'core.views.test_users', name='home'),
 	url(r'^proposals/([0-9])$', 'core.views.proposals', name='home'),
     #Facebook
 

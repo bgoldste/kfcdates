@@ -2406,3 +2406,679 @@ Traceback (most recent call last):
   File "/usr/lib/python2.6/dist-packages/pip.py", line 3543, in call_subprocess
     % (command_desc, proc.returncode))
 InstallationError: Command python setup.py egg_info failed with error code 1
+------------------------------------------------------------
+/usr/local/bin/pip run on Sun Oct 26 06:33:15 2014
+Downloading/unpacking python-social-auth
+  Getting page http://pypi.python.org/simple/python-social-auth
+  URLs to search for versions for python-social-auth:
+  * http://pypi.python.org/simple/python-social-auth
+  Analyzing links from page https://pypi.python.org/simple/python-social-auth/
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.0.tar.gz#md5=aa05f7541284656de382a6dc58b04a2b (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.0
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.1.tar.gz#md5=9e2571288121b6e4199b89dbb224b480 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.1
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.10.tar.gz#md5=d04c7003abc4ca63e3c1a34f5932abe1 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.10
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.11.tar.gz#md5=e36a661fc06bc4ac458771d223b6c64d (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.11
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.12.tar.gz#md5=6c0c101328ea10de6ad6ab5c5486d69c (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.12
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.13.tar.gz#md5=d033af5cbd1e16d4d7d6509a70514be6 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.13
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.14.tar.gz#md5=ece473e173610df31c7833f550d261eb (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.14
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.15.tar.gz#md5=bbbe36eca94d5d0f1d03a1746fe2692b (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.15
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.16.tar.gz#md5=d824454b5a6e4b8e86dd31926a19bad7 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.16
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.17.tar.gz#md5=267f15beb555c3aec9ab159dda2058d1 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.17
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.18.tar.gz#md5=ff0b6bd38ce1f4f806d0e69e9be4eef5 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.18
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.19.tar.gz#md5=2ecf0e1d21124cdfb3ce33a3e1274819 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.19
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.2.tar.gz#md5=deffcb70f14052dfe9e330177daa3932 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.2
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.20.tar.gz#md5=af6f69b63793936353e5f03a0faa4dd8 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.20
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.21.tar.gz#md5=1740a51334dc026453f4125eb3178368 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.21
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.22.tar.gz#md5=8b7c869c1f717a9390853797a3530dfa (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.22
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.23.tar.gz#md5=f0ce667b26b9e3d951614874294f494a (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.23
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.24.tar.gz#md5=ddf04a5ec8e4b42400be6d00df7f4f55 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.24
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.25.tar.gz#md5=6b06da0bb193e0df10eb34fda18c1f4c (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.25
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.26.tar.gz#md5=9307d54b9886db051033a1897412eeb7 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.26
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.3.tar.gz#md5=59e4891b92b9f30ddf3d46b07128118e (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.3
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.4.tar.gz#md5=1c679aa2b18118570e9d5e5daff3bd62 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.4
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.5.tar.gz#md5=895a6137a840aa05fc8b2b2c1704cd61 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.5
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.6.tar.gz#md5=35bf0136cf0fcd81abbfbf61da51fe49 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.6
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.7.tar.gz#md5=d7e99fbb8a7011c925f2cbef87b4af01 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.7
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.8.tar.gz#md5=85a00818ff4949856a74f7f304ff8dc2 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.8
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.1.9.tar.gz#md5=89348542b1fb10987f2b56777f04ed23 (from https://pypi.python.org/simple/python-social-auth/), version: 0.1.9
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.2.0.tar.gz#md5=d8ed4f7ae393255039bef1df9b7912a1 (from https://pypi.python.org/simple/python-social-auth/), version: 0.2.0
+    Found link https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.2.1.tar.gz#md5=ca8f6f6cc01c43caa95fa77b0ad49894 (from https://pypi.python.org/simple/python-social-auth/), version: 0.2.1
+    Skipping link https://travis-ci.org/omab/python-social-auth (from https://pypi.python.org/simple/python-social-auth/); not a file
+  Using version 0.2.1 (newest of versions: 0.2.1, 0.2.0, 0.1.26, 0.1.25, 0.1.24, 0.1.23, 0.1.22, 0.1.21, 0.1.20, 0.1.19, 0.1.18, 0.1.17, 0.1.16, 0.1.15, 0.1.14, 0.1.13, 0.1.12, 0.1.11, 0.1.10, 0.1.9, 0.1.8, 0.1.7, 0.1.6, 0.1.5, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0)
+  Downloading from URL https://pypi.python.org/packages/source/p/python-social-auth/python-social-auth-0.2.1.tar.gz#md5=ca8f6f6cc01c43caa95fa77b0ad49894 (from https://pypi.python.org/simple/python-social-auth/)
+  Running setup.py egg_info for package python-social-auth
+    running egg_info
+    creating pip-egg-info/python_social_auth.egg-info
+    writing requirements to pip-egg-info/python_social_auth.egg-info/requires.txt
+    writing pip-egg-info/python_social_auth.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/python_social_auth.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/python_social_auth.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/python_social_auth.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/python_social_auth.egg-info/SOURCES.txt'
+    writing manifest file 'pip-egg-info/python_social_auth.egg-info/SOURCES.txt'
+  Source in ./build/python-social-auth has version 0.2.1, which satisfies requirement python-social-auth
+Downloading/unpacking requests>=1.1.0 (from python-social-auth)
+  Getting page http://pypi.python.org/simple/requests
+  URLs to search for versions for requests>=1.1.0 (from python-social-auth):
+  * http://pypi.python.org/simple/requests
+  Analyzing links from page https://pypi.python.org/simple/requests/
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.0.0-py2.py3-none-any.whl#md5=6af9c16dbddd2fc751ae4f1606d041e8 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.0.1-py2.py3-none-any.whl#md5=d524f9a38a29efe1732fd130e5ebe433 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.1.0-py2.py3-none-any.whl#md5=0848cbc0cc7edd150cb8d6ddc25ca906 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.2.0-py2.py3-none-any.whl#md5=8f989615bb0d276d5f3158e7efab494c (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.2.1-py2.py3-none-any.whl#md5=1e38addb978e50bd86f62bda53956b03 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.3.0-py2.py3-none-any.whl#md5=f2d850fd48fc10a93aa03d69b87b96b4 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.4.0-py2.py3-none-any.whl#md5=47948d2fb3f2aa04235e6f637814b226 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.4.1-py2.py3-none-any.whl#md5=19d5413dc71309e4fb1f8103b8eb99ce (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.4.2-py2.py3-none-any.whl#md5=f49f34b1fcdef6b557964deea1a80cf3 (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests/requests-2.4.3-py2.py3-none-any.whl#md5=0a66a9c4c22272680430fbb9fb4ca34f (from https://pypi.python.org/simple/requests/); unknown archive format: .whl
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.0.tar.gz#md5=c90a48af18eb4170dbe4832c1104440c (from https://pypi.python.org/simple/requests/), version: 0.10.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.1.tar.gz#md5=699147d2143bff95238befa58980b912 (from https://pypi.python.org/simple/requests/), version: 0.10.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.2.tar.gz#md5=47c3cf85a0112d423137b43989663bef (from https://pypi.python.org/simple/requests/), version: 0.10.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.3.tar.gz#md5=a055af00593f4828c3becd0ccfab503f (from https://pypi.python.org/simple/requests/), version: 0.10.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.4.tar.gz#md5=5e465e9e739bcc9f71935ca4e9706168 (from https://pypi.python.org/simple/requests/), version: 0.10.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.6.tar.gz#md5=c889401445de3cbbac98509208a73b83 (from https://pypi.python.org/simple/requests/), version: 0.10.6
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.7.tar.gz#md5=a3ac9d431981dcfd592fd0f35c499e4a (from https://pypi.python.org/simple/requests/), version: 0.10.7
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.10.8.tar.gz#md5=0fc89a30eef76b2393cbc7ebace91750 (from https://pypi.python.org/simple/requests/), version: 0.10.8
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.11.1.tar.gz#md5=c903c32a0e1f04889e693da8e9c71872 (from https://pypi.python.org/simple/requests/), version: 0.11.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.11.2.tar.gz#md5=5acd23600c897bf1560dca18005b428c (from https://pypi.python.org/simple/requests/), version: 0.11.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.12.0.tar.gz#md5=c38bacf4d6a065f3c47463e63efdfb5a (from https://pypi.python.org/simple/requests/), version: 0.12.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.12.1.tar.gz#md5=fe9e0515d09733d0eb9e2031c03401b2 (from https://pypi.python.org/simple/requests/), version: 0.12.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.0.tar.gz#md5=7d41e51c273806456faab61370d5147e (from https://pypi.python.org/simple/requests/), version: 0.13.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.1.tar.gz#md5=31a08091feeefe60817e45122d933219 (from https://pypi.python.org/simple/requests/), version: 0.13.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.2.tar.gz#md5=fac5635391778e2394a411d37e69ae5e (from https://pypi.python.org/simple/requests/), version: 0.13.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.3.tar.gz#md5=54387d7df6c69580b906dcb5a2bd0724 (from https://pypi.python.org/simple/requests/), version: 0.13.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.4.tar.gz#md5=286cd3352509691e81c520accc5b9e48 (from https://pypi.python.org/simple/requests/), version: 0.13.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.5.tar.gz#md5=805fd122b4cfd224e15ff2f5288c5ba0 (from https://pypi.python.org/simple/requests/), version: 0.13.5
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.6.tar.gz#md5=9ea0f38cc4bf444be5a4c90f127211f2 (from https://pypi.python.org/simple/requests/), version: 0.13.6
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.7.tar.gz#md5=9212044f915d44fe3010cb923c0e08e5 (from https://pypi.python.org/simple/requests/), version: 0.13.7
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.8.tar.gz#md5=d01596bd344db94763b2e4dfaa7bc7b9 (from https://pypi.python.org/simple/requests/), version: 0.13.8
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.13.9.tar.gz#md5=66d52b8f47be517fc91a6e18d6b9ce82 (from https://pypi.python.org/simple/requests/), version: 0.13.9
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.14.0.tar.gz#md5=a809c747e4f09b92147721ebc3e23dd6 (from https://pypi.python.org/simple/requests/), version: 0.14.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.14.1.tar.gz#md5=3de30600072cbc7214ae342d1d08aa46 (from https://pypi.python.org/simple/requests/), version: 0.14.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.14.2.tar.gz#md5=488508ba3e8270992ad5b3fb54d364ca (from https://pypi.python.org/simple/requests/), version: 0.14.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.2.0.tar.gz#md5=637ae94cb6f2f1d9ea9020293055964a (from https://pypi.python.org/simple/requests/), version: 0.2.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.2.1.tar.gz#md5=7e9590f3985ece46fc8306e906b458c7 (from https://pypi.python.org/simple/requests/), version: 0.2.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.2.2.tar.gz#md5=a703489b1a4a650698ddcf84857360c6 (from https://pypi.python.org/simple/requests/), version: 0.2.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.2.3.tar.gz#md5=102243646fc0cffdc82269f4bb5c6d5d (from https://pypi.python.org/simple/requests/), version: 0.2.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.2.4.tar.gz#md5=62dbe8cf12bc1ccd03776e74f59e9ef6 (from https://pypi.python.org/simple/requests/), version: 0.2.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.3.0.tar.gz#md5=aa1306575a78ba8b5e625dd2645d2ef0 (from https://pypi.python.org/simple/requests/), version: 0.3.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.3.1.tar.gz#md5=3f4701e2ab414cd7018804a70328c527 (from https://pypi.python.org/simple/requests/), version: 0.3.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.3.2.tar.gz#md5=bde777f4c5b7bbb09033901c443962b3 (from https://pypi.python.org/simple/requests/), version: 0.3.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.3.3.tar.gz#md5=84c762c116617ba4dd03c19e2b61eb53 (from https://pypi.python.org/simple/requests/), version: 0.3.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.3.4.tar.gz#md5=55152cc2b135bc8989dc4fa279295f8b (from https://pypi.python.org/simple/requests/), version: 0.3.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.4.0.tar.gz#md5=77a7a7edd54169c6fa7ace49dcb0b20c (from https://pypi.python.org/simple/requests/), version: 0.4.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.4.1.tar.gz#md5=812ff0ce63d14f7b940bacd880d54ee0 (from https://pypi.python.org/simple/requests/), version: 0.4.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.5.0.tar.gz#md5=6dfdc1688217d774d524e056ec6605a6 (from https://pypi.python.org/simple/requests/), version: 0.5.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.5.1.tar.gz#md5=33a6e65d6a4e5b2d91df76256f607b81 (from https://pypi.python.org/simple/requests/), version: 0.5.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.0.tar.gz#md5=235e9fb6bfd71a48c0f00c0d5aef8896 (from https://pypi.python.org/simple/requests/), version: 0.6.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.1.tar.gz#md5=07770334d48bd69ede1cc28cd0dd7680 (from https://pypi.python.org/simple/requests/), version: 0.6.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.2.tar.gz#md5=0583bb5393b9cfcb022dc2aef7d6ffc8 (from https://pypi.python.org/simple/requests/), version: 0.6.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.3.tar.gz#md5=35a954ae85b358e498fb0e602f1dce9d (from https://pypi.python.org/simple/requests/), version: 0.6.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.4.tar.gz#md5=e0eec314178ad9a7bb14f2ec32f35ba3 (from https://pypi.python.org/simple/requests/), version: 0.6.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.5.tar.gz#md5=52f8bc956e027c8a0eb2684f6928169d (from https://pypi.python.org/simple/requests/), version: 0.6.5
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.6.6.tar.gz#md5=2180dacebc0e30ba730d083739907af6 (from https://pypi.python.org/simple/requests/), version: 0.6.6
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.0.tar.gz#md5=83a1a7d79218756efd19b254eeb6b1f0 (from https://pypi.python.org/simple/requests/), version: 0.7.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.1.tar.gz#md5=4821c6902d8e83c910c69c6492388e5f (from https://pypi.python.org/simple/requests/), version: 0.7.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.2.tar.gz#md5=03eb97ed6aacb4102fd434bbfc13ce17 (from https://pypi.python.org/simple/requests/), version: 0.7.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.3.tar.gz#md5=267f6f7d1109775d24a288f798e3ab4a (from https://pypi.python.org/simple/requests/), version: 0.7.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.4.tar.gz#md5=c015765399b8c1e309c84ade0d38f07b (from https://pypi.python.org/simple/requests/), version: 0.7.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.5.tar.gz#md5=9a12281a811ca25d347d806c456d96f1 (from https://pypi.python.org/simple/requests/), version: 0.7.5
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.7.6.tar.gz#md5=728b21bf3914d69a4ff1012c66d9b6ba (from https://pypi.python.org/simple/requests/), version: 0.7.6
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.0.tar.gz#md5=64dc0095cb645aa7f0083957950d524d (from https://pypi.python.org/simple/requests/), version: 0.8.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.1.tar.gz#md5=6135f837fbd113fc62904c60dcc5c70d (from https://pypi.python.org/simple/requests/), version: 0.8.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.2.tar.gz#md5=bdbbd7f45688e23e87eec52835959943 (from https://pypi.python.org/simple/requests/), version: 0.8.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.3.tar.gz#md5=93e4cd27ab646fb613a926fede1cc4f5 (from https://pypi.python.org/simple/requests/), version: 0.8.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.4.tar.gz#md5=642e5c70250989e4feda9c50be57b100 (from https://pypi.python.org/simple/requests/), version: 0.8.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.5.tar.gz#md5=5f2975ee9e57f4ea000e5a3f50fc85d1 (from https://pypi.python.org/simple/requests/), version: 0.8.5
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.6.tar.gz#md5=21b03926ab38417a704ebce57972571a (from https://pypi.python.org/simple/requests/), version: 0.8.6
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.7.tar.gz#md5=e4d4ee3a90396908bd04b50bf2136617 (from https://pypi.python.org/simple/requests/), version: 0.8.7
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.8.tar.gz#md5=bfb182cfd3ed839b97744c553b87f502 (from https://pypi.python.org/simple/requests/), version: 0.8.8
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.8.9.tar.gz#md5=ff5b3bf5bc3ad19930d3f3afe51f182b (from https://pypi.python.org/simple/requests/), version: 0.8.9
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.9.0.tar.gz#md5=5f6f03ec76f68a7a3f35120ab5a6c589 (from https://pypi.python.org/simple/requests/), version: 0.9.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.9.1.tar.gz#md5=8ed4667edb5d57945b74a9137adbb8bd (from https://pypi.python.org/simple/requests/), version: 0.9.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.9.2.tar.gz#md5=65b36d99a4d2f78a22f08c95d2475e33 (from https://pypi.python.org/simple/requests/), version: 0.9.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-0.9.3.tar.gz#md5=b13b6fbfa8fc3fc3c25bae300748053f (from https://pypi.python.org/simple/requests/), version: 0.9.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.0.0.tar.gz#md5=099c9035c4b30a7ae5484b1beabc7407 (from https://pypi.python.org/simple/requests/), version: 1.0.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.0.1.tar.gz#md5=2e938f26f2bdf2899862c751bfa7eff5 (from https://pypi.python.org/simple/requests/), version: 1.0.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.0.2.tar.gz#md5=e5c1a5a5472cd61f144743dd25a2a29f (from https://pypi.python.org/simple/requests/), version: 1.0.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.0.3.tar.gz#md5=a3169a33973d4b5b51843ead01c5e999 (from https://pypi.python.org/simple/requests/), version: 1.0.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.0.4.tar.gz#md5=0b7448f9e1a077a7218720575003a1b6 (from https://pypi.python.org/simple/requests/), version: 1.0.4
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.1.0.tar.gz#md5=a0158815af244c32041a3147ee09abf3 (from https://pypi.python.org/simple/requests/), version: 1.1.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.2.0.tar.gz#md5=22af2682233770e5468a986f451c51c0 (from https://pypi.python.org/simple/requests/), version: 1.2.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.2.1.tar.gz#md5=4d019670b94b17e329007d64e67e045e (from https://pypi.python.org/simple/requests/), version: 1.2.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.2.2.tar.gz#md5=1f655ab7f2aa7447a1657ed69786f436 (from https://pypi.python.org/simple/requests/), version: 1.2.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-1.2.3.tar.gz#md5=adbd3f18445f7fe5e77f65c502e264fb (from https://pypi.python.org/simple/requests/), version: 1.2.3
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.0.0.tar.gz#md5=856fc825c17483e25fd55db115028e3f (from https://pypi.python.org/simple/requests/), version: 2.0.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.0.1.tar.gz#md5=38e61c2856d2ba2782286730241975e6 (from https://pypi.python.org/simple/requests/), version: 2.0.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.1.0.tar.gz#md5=28543001831f46b1ff40686ebc027deb (from https://pypi.python.org/simple/requests/), version: 2.1.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.2.0.tar.gz#md5=4d2e17221d478ece045e2e81cdb177f5 (from https://pypi.python.org/simple/requests/), version: 2.2.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.2.1.tar.gz#md5=ac27081135f58d1a43e4fb38258d6f4e (from https://pypi.python.org/simple/requests/), version: 2.2.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.3.0.tar.gz#md5=7449ffdc8ec9ac37bbcd286003c80f00 (from https://pypi.python.org/simple/requests/), version: 2.3.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.4.0.tar.gz#md5=99b830d1afe2e5920adbea0fe3120948 (from https://pypi.python.org/simple/requests/), version: 2.4.0
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.4.1.tar.gz#md5=931461f761c70708c46ea65b7889da58 (from https://pypi.python.org/simple/requests/), version: 2.4.1
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.4.2.tar.gz#md5=a2476d2dd83a0520847f216ce0b5f9d1 (from https://pypi.python.org/simple/requests/), version: 2.4.2
+    Found link https://pypi.python.org/packages/source/r/requests/requests-2.4.3.tar.gz#md5=02214b3a179e445545de4b7a98d3dd17 (from https://pypi.python.org/simple/requests/), version: 2.4.3
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-1.0.4.tar.gz#md5=0b7448f9e1a077a7218720575003a1b6 (from https://pypi.python.org/simple/requests/), version 1.0.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-1.0.3.tar.gz#md5=a3169a33973d4b5b51843ead01c5e999 (from https://pypi.python.org/simple/requests/), version 1.0.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-1.0.2.tar.gz#md5=e5c1a5a5472cd61f144743dd25a2a29f (from https://pypi.python.org/simple/requests/), version 1.0.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-1.0.1.tar.gz#md5=2e938f26f2bdf2899862c751bfa7eff5 (from https://pypi.python.org/simple/requests/), version 1.0.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-1.0.0.tar.gz#md5=099c9035c4b30a7ae5484b1beabc7407 (from https://pypi.python.org/simple/requests/), version 1.0.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.14.2.tar.gz#md5=488508ba3e8270992ad5b3fb54d364ca (from https://pypi.python.org/simple/requests/), version 0.14.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.14.1.tar.gz#md5=3de30600072cbc7214ae342d1d08aa46 (from https://pypi.python.org/simple/requests/), version 0.14.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.14.0.tar.gz#md5=a809c747e4f09b92147721ebc3e23dd6 (from https://pypi.python.org/simple/requests/), version 0.14.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.9.tar.gz#md5=66d52b8f47be517fc91a6e18d6b9ce82 (from https://pypi.python.org/simple/requests/), version 0.13.9 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.8.tar.gz#md5=d01596bd344db94763b2e4dfaa7bc7b9 (from https://pypi.python.org/simple/requests/), version 0.13.8 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.7.tar.gz#md5=9212044f915d44fe3010cb923c0e08e5 (from https://pypi.python.org/simple/requests/), version 0.13.7 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.6.tar.gz#md5=9ea0f38cc4bf444be5a4c90f127211f2 (from https://pypi.python.org/simple/requests/), version 0.13.6 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.5.tar.gz#md5=805fd122b4cfd224e15ff2f5288c5ba0 (from https://pypi.python.org/simple/requests/), version 0.13.5 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.4.tar.gz#md5=286cd3352509691e81c520accc5b9e48 (from https://pypi.python.org/simple/requests/), version 0.13.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.3.tar.gz#md5=54387d7df6c69580b906dcb5a2bd0724 (from https://pypi.python.org/simple/requests/), version 0.13.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.2.tar.gz#md5=fac5635391778e2394a411d37e69ae5e (from https://pypi.python.org/simple/requests/), version 0.13.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.1.tar.gz#md5=31a08091feeefe60817e45122d933219 (from https://pypi.python.org/simple/requests/), version 0.13.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.13.0.tar.gz#md5=7d41e51c273806456faab61370d5147e (from https://pypi.python.org/simple/requests/), version 0.13.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.12.1.tar.gz#md5=fe9e0515d09733d0eb9e2031c03401b2 (from https://pypi.python.org/simple/requests/), version 0.12.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.12.0.tar.gz#md5=c38bacf4d6a065f3c47463e63efdfb5a (from https://pypi.python.org/simple/requests/), version 0.12.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.11.2.tar.gz#md5=5acd23600c897bf1560dca18005b428c (from https://pypi.python.org/simple/requests/), version 0.11.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.11.1.tar.gz#md5=c903c32a0e1f04889e693da8e9c71872 (from https://pypi.python.org/simple/requests/), version 0.11.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.8.tar.gz#md5=0fc89a30eef76b2393cbc7ebace91750 (from https://pypi.python.org/simple/requests/), version 0.10.8 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.7.tar.gz#md5=a3ac9d431981dcfd592fd0f35c499e4a (from https://pypi.python.org/simple/requests/), version 0.10.7 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.6.tar.gz#md5=c889401445de3cbbac98509208a73b83 (from https://pypi.python.org/simple/requests/), version 0.10.6 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.4.tar.gz#md5=5e465e9e739bcc9f71935ca4e9706168 (from https://pypi.python.org/simple/requests/), version 0.10.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.3.tar.gz#md5=a055af00593f4828c3becd0ccfab503f (from https://pypi.python.org/simple/requests/), version 0.10.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.2.tar.gz#md5=47c3cf85a0112d423137b43989663bef (from https://pypi.python.org/simple/requests/), version 0.10.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.1.tar.gz#md5=699147d2143bff95238befa58980b912 (from https://pypi.python.org/simple/requests/), version 0.10.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.10.0.tar.gz#md5=c90a48af18eb4170dbe4832c1104440c (from https://pypi.python.org/simple/requests/), version 0.10.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.9.3.tar.gz#md5=b13b6fbfa8fc3fc3c25bae300748053f (from https://pypi.python.org/simple/requests/), version 0.9.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.9.2.tar.gz#md5=65b36d99a4d2f78a22f08c95d2475e33 (from https://pypi.python.org/simple/requests/), version 0.9.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.9.1.tar.gz#md5=8ed4667edb5d57945b74a9137adbb8bd (from https://pypi.python.org/simple/requests/), version 0.9.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.9.0.tar.gz#md5=5f6f03ec76f68a7a3f35120ab5a6c589 (from https://pypi.python.org/simple/requests/), version 0.9.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.9.tar.gz#md5=ff5b3bf5bc3ad19930d3f3afe51f182b (from https://pypi.python.org/simple/requests/), version 0.8.9 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.8.tar.gz#md5=bfb182cfd3ed839b97744c553b87f502 (from https://pypi.python.org/simple/requests/), version 0.8.8 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.7.tar.gz#md5=e4d4ee3a90396908bd04b50bf2136617 (from https://pypi.python.org/simple/requests/), version 0.8.7 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.6.tar.gz#md5=21b03926ab38417a704ebce57972571a (from https://pypi.python.org/simple/requests/), version 0.8.6 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.5.tar.gz#md5=5f2975ee9e57f4ea000e5a3f50fc85d1 (from https://pypi.python.org/simple/requests/), version 0.8.5 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.4.tar.gz#md5=642e5c70250989e4feda9c50be57b100 (from https://pypi.python.org/simple/requests/), version 0.8.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.3.tar.gz#md5=93e4cd27ab646fb613a926fede1cc4f5 (from https://pypi.python.org/simple/requests/), version 0.8.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.2.tar.gz#md5=bdbbd7f45688e23e87eec52835959943 (from https://pypi.python.org/simple/requests/), version 0.8.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.1.tar.gz#md5=6135f837fbd113fc62904c60dcc5c70d (from https://pypi.python.org/simple/requests/), version 0.8.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.8.0.tar.gz#md5=64dc0095cb645aa7f0083957950d524d (from https://pypi.python.org/simple/requests/), version 0.8.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.6.tar.gz#md5=728b21bf3914d69a4ff1012c66d9b6ba (from https://pypi.python.org/simple/requests/), version 0.7.6 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.5.tar.gz#md5=9a12281a811ca25d347d806c456d96f1 (from https://pypi.python.org/simple/requests/), version 0.7.5 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.4.tar.gz#md5=c015765399b8c1e309c84ade0d38f07b (from https://pypi.python.org/simple/requests/), version 0.7.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.3.tar.gz#md5=267f6f7d1109775d24a288f798e3ab4a (from https://pypi.python.org/simple/requests/), version 0.7.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.2.tar.gz#md5=03eb97ed6aacb4102fd434bbfc13ce17 (from https://pypi.python.org/simple/requests/), version 0.7.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.1.tar.gz#md5=4821c6902d8e83c910c69c6492388e5f (from https://pypi.python.org/simple/requests/), version 0.7.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.7.0.tar.gz#md5=83a1a7d79218756efd19b254eeb6b1f0 (from https://pypi.python.org/simple/requests/), version 0.7.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.6.tar.gz#md5=2180dacebc0e30ba730d083739907af6 (from https://pypi.python.org/simple/requests/), version 0.6.6 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.5.tar.gz#md5=52f8bc956e027c8a0eb2684f6928169d (from https://pypi.python.org/simple/requests/), version 0.6.5 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.4.tar.gz#md5=e0eec314178ad9a7bb14f2ec32f35ba3 (from https://pypi.python.org/simple/requests/), version 0.6.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.3.tar.gz#md5=35a954ae85b358e498fb0e602f1dce9d (from https://pypi.python.org/simple/requests/), version 0.6.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.2.tar.gz#md5=0583bb5393b9cfcb022dc2aef7d6ffc8 (from https://pypi.python.org/simple/requests/), version 0.6.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.1.tar.gz#md5=07770334d48bd69ede1cc28cd0dd7680 (from https://pypi.python.org/simple/requests/), version 0.6.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.6.0.tar.gz#md5=235e9fb6bfd71a48c0f00c0d5aef8896 (from https://pypi.python.org/simple/requests/), version 0.6.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.5.1.tar.gz#md5=33a6e65d6a4e5b2d91df76256f607b81 (from https://pypi.python.org/simple/requests/), version 0.5.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.5.0.tar.gz#md5=6dfdc1688217d774d524e056ec6605a6 (from https://pypi.python.org/simple/requests/), version 0.5.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.4.1.tar.gz#md5=812ff0ce63d14f7b940bacd880d54ee0 (from https://pypi.python.org/simple/requests/), version 0.4.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.4.0.tar.gz#md5=77a7a7edd54169c6fa7ace49dcb0b20c (from https://pypi.python.org/simple/requests/), version 0.4.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.3.4.tar.gz#md5=55152cc2b135bc8989dc4fa279295f8b (from https://pypi.python.org/simple/requests/), version 0.3.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.3.3.tar.gz#md5=84c762c116617ba4dd03c19e2b61eb53 (from https://pypi.python.org/simple/requests/), version 0.3.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.3.2.tar.gz#md5=bde777f4c5b7bbb09033901c443962b3 (from https://pypi.python.org/simple/requests/), version 0.3.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.3.1.tar.gz#md5=3f4701e2ab414cd7018804a70328c527 (from https://pypi.python.org/simple/requests/), version 0.3.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.3.0.tar.gz#md5=aa1306575a78ba8b5e625dd2645d2ef0 (from https://pypi.python.org/simple/requests/), version 0.3.0 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.2.4.tar.gz#md5=62dbe8cf12bc1ccd03776e74f59e9ef6 (from https://pypi.python.org/simple/requests/), version 0.2.4 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.2.3.tar.gz#md5=102243646fc0cffdc82269f4bb5c6d5d (from https://pypi.python.org/simple/requests/), version 0.2.3 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.2.2.tar.gz#md5=a703489b1a4a650698ddcf84857360c6 (from https://pypi.python.org/simple/requests/), version 0.2.2 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.2.1.tar.gz#md5=7e9590f3985ece46fc8306e906b458c7 (from https://pypi.python.org/simple/requests/), version 0.2.1 doesn't match >=1.1.0
+  Ignoring link https://pypi.python.org/packages/source/r/requests/requests-0.2.0.tar.gz#md5=637ae94cb6f2f1d9ea9020293055964a (from https://pypi.python.org/simple/requests/), version 0.2.0 doesn't match >=1.1.0
+  Using version 2.4.3 (newest of versions: 2.4.3, 2.4.2, 2.4.1, 2.4.0, 2.3.0, 2.2.1, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0)
+  Downloading from URL https://pypi.python.org/packages/source/r/requests/requests-2.4.3.tar.gz#md5=02214b3a179e445545de4b7a98d3dd17 (from https://pypi.python.org/simple/requests/)
+  Running setup.py egg_info for package requests
+    running egg_info
+    creating pip-egg-info/requests.egg-info
+    writing requirements to pip-egg-info/requests.egg-info/requires.txt
+    writing pip-egg-info/requests.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/requests.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/requests.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/requests.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/requests.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/requests.egg-info/SOURCES.txt'
+  Source in ./build/requests has version 2.4.3, which satisfies requirement requests>=1.1.0 (from python-social-auth)
+Downloading/unpacking oauthlib>=0.3.8 (from python-social-auth)
+  Getting page http://pypi.python.org/simple/oauthlib
+  URLs to search for versions for oauthlib>=0.3.8 (from python-social-auth):
+  * http://pypi.python.org/simple/oauthlib
+  Analyzing links from page https://pypi.python.org/simple/oauthlib/
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.0.1.tar.gz#md5=f4837069a99ecc07b34b1e6888deb13a (from https://pypi.python.org/simple/oauthlib/), version: 0.0.1
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.0.2.tar.gz#md5=c4258b6eac3e75d744634f89df12a2ba (from https://pypi.python.org/simple/oauthlib/), version: 0.0.2
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.0.tar.gz#md5=063e1153e19b91ac4c718bdb8883e4eb (from https://pypi.python.org/simple/oauthlib/), version: 0.1.0
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.1.tar.gz#md5=742d258c051005a772bd16f474325dd8 (from https://pypi.python.org/simple/oauthlib/), version: 0.1.1
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.2.tar.gz#md5=dce0471e2bd22e1c3ece6efac7b46316 (from https://pypi.python.org/simple/oauthlib/), version: 0.1.2
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.3.tar.gz#md5=9e191613b92c6a6bb7aefc24e76d21b6 (from https://pypi.python.org/simple/oauthlib/), version: 0.1.3
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.0.tar.gz#md5=0330201a1aef2d6d92cb0516f81fc1fe (from https://pypi.python.org/simple/oauthlib/), version: 0.3.0
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.2.tar.gz#md5=c354cb968e420226276baa00233dbdad (from https://pypi.python.org/simple/oauthlib/), version: 0.3.2
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.3.tar.gz#md5=0ed56b8cc2ca4d9784cf1606330e5413 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.3
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.4.tar.gz#md5=03556517a7f076b8c8b7551bca80eb29 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.4
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.5.tar.gz#md5=230144a4a7bcbfa3250c95d69c24f329 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.5
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.6.tar.gz#md5=81e151a4e04c854841566a7fd73a30b6 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.6
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.7.tar.gz#md5=75c861ffde4ea2170bb62428eb78ef69 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.7
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.8.tar.gz#md5=d5b6078b47c52db1bf93e1b277846173 (from https://pypi.python.org/simple/oauthlib/), version: 0.3.8
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.4.0.tar.gz#md5=882d5c5cba171df5943a6b8fc9404455 (from https://pypi.python.org/simple/oauthlib/), version: 0.4.0
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.4.1.tar.gz#md5=c5e525c73cead174b1025951f6e2f330 (from https://pypi.python.org/simple/oauthlib/), version: 0.4.1
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.4.2.tar.gz#md5=0c2cc4a7c36630ec0bb202e140b0fc82 (from https://pypi.python.org/simple/oauthlib/), version: 0.4.2
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.5.0.tar.gz#md5=d12c507de33403ebdf290fbffdb98213 (from https://pypi.python.org/simple/oauthlib/), version: 0.5.0
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.5.1.tar.gz#md5=45ebbd43c9430bb404c9aa0979d949f2 (from https://pypi.python.org/simple/oauthlib/), version: 0.5.1
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.6.0.tar.gz#md5=b7c3e1832ec111e65baaab2de7834aae (from https://pypi.python.org/simple/oauthlib/), version: 0.6.0
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.6.1.tar.gz#md5=18f8524c85606380c1ef8a7ff50d69cc (from https://pypi.python.org/simple/oauthlib/), version: 0.6.1
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.6.2.tar.gz#md5=e987fec8f58cd0f3896d750bb5536d8d (from https://pypi.python.org/simple/oauthlib/), version: 0.6.2
+    Found link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.6.3.tar.gz#md5=3ecba28f991ee58db2aeda8b4e2b56b1 (from https://pypi.python.org/simple/oauthlib/), version: 0.6.3
+    Skipping link http://docs.python-requests.org/en/latest/user/quickstart/#oauth-authentication (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link http://tools.ietf.org/html/rfc5849 (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link https://coveralls.io/r/idan/oauthlib (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link https://github.com/kennethreitz/requests (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link https://github.com/requests/requests-oauthlib (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link https://oauthlib.readthedocs.org/en/latest/index.html (from https://pypi.python.org/simple/oauthlib/); unknown archive format: .html
+    Skipping link https://plus.google.com/communities/101889017375384052571 (from https://pypi.python.org/simple/oauthlib/); not a file
+    Skipping link https://travis-ci.org/idan/oauthlib (from https://pypi.python.org/simple/oauthlib/); not a file
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.7.tar.gz#md5=75c861ffde4ea2170bb62428eb78ef69 (from https://pypi.python.org/simple/oauthlib/), version 0.3.7 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.6.tar.gz#md5=81e151a4e04c854841566a7fd73a30b6 (from https://pypi.python.org/simple/oauthlib/), version 0.3.6 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.5.tar.gz#md5=230144a4a7bcbfa3250c95d69c24f329 (from https://pypi.python.org/simple/oauthlib/), version 0.3.5 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.4.tar.gz#md5=03556517a7f076b8c8b7551bca80eb29 (from https://pypi.python.org/simple/oauthlib/), version 0.3.4 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.3.tar.gz#md5=0ed56b8cc2ca4d9784cf1606330e5413 (from https://pypi.python.org/simple/oauthlib/), version 0.3.3 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.2.tar.gz#md5=c354cb968e420226276baa00233dbdad (from https://pypi.python.org/simple/oauthlib/), version 0.3.2 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.3.0.tar.gz#md5=0330201a1aef2d6d92cb0516f81fc1fe (from https://pypi.python.org/simple/oauthlib/), version 0.3.0 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.3.tar.gz#md5=9e191613b92c6a6bb7aefc24e76d21b6 (from https://pypi.python.org/simple/oauthlib/), version 0.1.3 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.2.tar.gz#md5=dce0471e2bd22e1c3ece6efac7b46316 (from https://pypi.python.org/simple/oauthlib/), version 0.1.2 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.1.tar.gz#md5=742d258c051005a772bd16f474325dd8 (from https://pypi.python.org/simple/oauthlib/), version 0.1.1 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.1.0.tar.gz#md5=063e1153e19b91ac4c718bdb8883e4eb (from https://pypi.python.org/simple/oauthlib/), version 0.1.0 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.0.2.tar.gz#md5=c4258b6eac3e75d744634f89df12a2ba (from https://pypi.python.org/simple/oauthlib/), version 0.0.2 doesn't match >=0.3.8
+  Ignoring link https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.0.1.tar.gz#md5=f4837069a99ecc07b34b1e6888deb13a (from https://pypi.python.org/simple/oauthlib/), version 0.0.1 doesn't match >=0.3.8
+  Using version 0.6.3 (newest of versions: 0.6.3, 0.6.2, 0.6.1, 0.6.0, 0.5.1, 0.5.0, 0.4.2, 0.4.1, 0.4.0, 0.3.8)
+  Downloading from URL https://pypi.python.org/packages/source/o/oauthlib/oauthlib-0.6.3.tar.gz#md5=3ecba28f991ee58db2aeda8b4e2b56b1 (from https://pypi.python.org/simple/oauthlib/)
+  Running setup.py egg_info for package oauthlib
+    running egg_info
+    creating pip-egg-info/oauthlib.egg-info
+    writing requirements to pip-egg-info/oauthlib.egg-info/requires.txt
+    writing pip-egg-info/oauthlib.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/oauthlib.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/oauthlib.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/oauthlib.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/oauthlib.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/oauthlib.egg-info/SOURCES.txt'
+  Source in ./build/oauthlib has version 0.6.3, which satisfies requirement oauthlib>=0.3.8 (from python-social-auth)
+Requirement already satisfied: six>=1.2.0 in /usr/local/lib/python2.6/dist-packages (from python-social-auth)
+Downloading/unpacking PyJWT>=0.2.1 (from python-social-auth)
+  Getting page http://pypi.python.org/simple/PyJWT
+  URLs to search for versions for PyJWT>=0.2.1 (from python-social-auth):
+  * http://pypi.python.org/simple/PyJWT
+  Analyzing links from page https://pypi.python.org/simple/pyjwt/
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.1-py2.5.egg#md5=91473986154cc83224a3316a7341ea15 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.2-py2.5.egg#md5=4dc48c3dae693cb10946234f5ab01169 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.3-py2.5.egg#md5=b6e6193f979cd7198858f3bee395bfb6 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.4-py2.5.egg#md5=f88d589ec5da1df310820afc005c78a4 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.5-py2.5.egg#md5=c0c3436bccac647ef0763d4af5647bb2 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.6-py2.5.egg#md5=80b8210e530f257fc509c86a00444850 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.7-py2.5.egg#md5=d5c6ae26e68d6406da1da2a1c2d9df55 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.5/P/PyJWT/PyJWT-0.1.8-py2.5.egg#md5=5189799747eabbffa36d341591e649c3 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.1-py2.6.egg#md5=320e2d6c406d0334ccd4517e0af4a21f (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.2-py2.6.egg#md5=6d08f6964d4fc5edd1457b207131997a (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.3-py2.6.egg#md5=60cad4db521077cbd5012c9305d6d4b4 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.4-py2.6.egg#md5=5e7c95ee1a53b27145df2d0e35abd011 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.5-py2.6.egg#md5=555e40f1a2c022446848a23850d6ced9 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.6-py2.6.egg#md5=d41853fd2adddd65c5424f6a6c212c5b (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.7-py2.6.egg#md5=a33a5e9b325ab2d89e3579d3a2d1c3fd (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.8-py2.6.egg#md5=6a1b0cd79316b00f2fbb31e5be5df738 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.1.9-py2.6.egg#md5=6f6dba0bfac4b369c5d5ff9777e6f88f (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.2.0-py2.6.egg#md5=e536673474316c0848c5f7cb7c204b4c (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.2.1-py2.6.egg#md5=56f35a90c050f291ccc208c7b27d0671 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.6/P/PyJWT/PyJWT-0.2.3-py2.6.egg#md5=324cb5f3576c3505a99d29984af1eb20 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.1-py2.7.egg#md5=559ee9eda1cc1d3208e117a64775947e (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.2-py2.7.egg#md5=4e0422517a5b88ec57a0be2cdeb5fa7d (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.3-py2.7.egg#md5=16e24d126a650ea33b80d5ab84fb442c (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.4-py2.7.egg#md5=4b7f969668b3b7b7095d01de5c0cf6b0 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.5-py2.7.egg#md5=1a84b500db4cf1858c82be8dcb06add7 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.6-py2.7.egg#md5=4220a08f54cff89718fc97a8cc23839e (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.7-py2.7.egg#md5=ad9b538508fe5c063d3e23b53306b163 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.8-py2.7.egg#md5=512237b13cfccd7ae92edd7c982d892b (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.1.9-py2.7.egg#md5=e7e465f80c708828ef274da2076fc9ae (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.2.0-py2.7.egg#md5=42ed94275eb1d8a2f91333ac77f9adb2 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.2.1-py2.7.egg#md5=81348527e1adde10df7d25137119ba03 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.2.3-py2.7.egg#md5=81dbcacba41e45a731c332a05a3a3074 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.2.3-py2.py3-none-any.whl#md5=f6fc37cf8093f0495f9290bf075978db (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/P/PyJWT/PyJWT-0.3.0-py2.py3-none-any.whl#md5=85843491d64eb376fe37f8b15ad09057 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.1.7-py3.3.egg#md5=5bc95ebd8d83672054576f9422307a13 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.1.8-py3.3.egg#md5=c01a58a53c00abc8e2487dd719424ee1 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.1.9-py3.3.egg#md5=729693e99354567fffa1aeac0bafea7d (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.2.0-py3.3.egg#md5=dc0ce1be49d691d90ad037451887ece5 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.2.1-py3.3.egg#md5=37b8d5531cc1430b58b7dbfc0bdd92bd (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Skipping link https://pypi.python.org/packages/3.3/P/PyJWT/PyJWT-0.2.3-py3.3.egg#md5=d1b8b73c5f296037e4078333c81987f5 (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .egg
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.1.tar.gz#md5=519d6c5729c34b6a78e23812f025731f (from https://pypi.python.org/simple/pyjwt/), version: 0.1.1
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.2.tar.gz#md5=523cf273edf1fe29885c08b98b5c8d53 (from https://pypi.python.org/simple/pyjwt/), version: 0.1.2
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.3.tar.gz#md5=63d491d84e49a8041781065beaafb75a (from https://pypi.python.org/simple/pyjwt/), version: 0.1.3
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.4.tar.gz#md5=d9c5e02a629bac1e567a3be2f8b3825c (from https://pypi.python.org/simple/pyjwt/), version: 0.1.4
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.5.tar.gz#md5=030d1cb79eddee8cd854a0442513b341 (from https://pypi.python.org/simple/pyjwt/), version: 0.1.5
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.6.tar.gz#md5=ba939c846135a51289f4a4854df935ad (from https://pypi.python.org/simple/pyjwt/), version: 0.1.6
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.7.tar.gz#md5=6d661ddd3bba368c5c51520e6d05e56a (from https://pypi.python.org/simple/pyjwt/), version: 0.1.7
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.8.tar.gz#md5=d003ecd03d6748391333fdaba6184602 (from https://pypi.python.org/simple/pyjwt/), version: 0.1.8
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.9.tar.gz#md5=615f8c8c59d92e6f9ca4f9e985d1a55d (from https://pypi.python.org/simple/pyjwt/), version: 0.1.9
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.2.0.tar.gz#md5=eafb5c5b0c01d11c13f70382250c3e36 (from https://pypi.python.org/simple/pyjwt/), version: 0.2.0
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.2.1.tar.gz#md5=500fdbdd4c7b60404063f7d9c2717108 (from https://pypi.python.org/simple/pyjwt/), version: 0.2.1
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.2.3.tar.gz#md5=2590b4713ee53a57c8fa32fbbb03d794 (from https://pypi.python.org/simple/pyjwt/), version: 0.2.3
+    Found link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.3.0.tar.gz#md5=b31c56ea2f31020e4aafb74f06252a62 (from https://pypi.python.org/simple/pyjwt/), version: 0.3.0
+    Skipping link http://self-issued.info/docs/draft-jones-json-web-token-01.html (from https://pypi.python.org/simple/pyjwt/); unknown archive format: .html
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.2.0.tar.gz#md5=eafb5c5b0c01d11c13f70382250c3e36 (from https://pypi.python.org/simple/pyjwt/), version 0.2.0 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.9.tar.gz#md5=615f8c8c59d92e6f9ca4f9e985d1a55d (from https://pypi.python.org/simple/pyjwt/), version 0.1.9 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.8.tar.gz#md5=d003ecd03d6748391333fdaba6184602 (from https://pypi.python.org/simple/pyjwt/), version 0.1.8 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.7.tar.gz#md5=6d661ddd3bba368c5c51520e6d05e56a (from https://pypi.python.org/simple/pyjwt/), version 0.1.7 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.6.tar.gz#md5=ba939c846135a51289f4a4854df935ad (from https://pypi.python.org/simple/pyjwt/), version 0.1.6 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.5.tar.gz#md5=030d1cb79eddee8cd854a0442513b341 (from https://pypi.python.org/simple/pyjwt/), version 0.1.5 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.4.tar.gz#md5=d9c5e02a629bac1e567a3be2f8b3825c (from https://pypi.python.org/simple/pyjwt/), version 0.1.4 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.3.tar.gz#md5=63d491d84e49a8041781065beaafb75a (from https://pypi.python.org/simple/pyjwt/), version 0.1.3 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.2.tar.gz#md5=523cf273edf1fe29885c08b98b5c8d53 (from https://pypi.python.org/simple/pyjwt/), version 0.1.2 doesn't match >=0.2.1
+  Ignoring link https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.1.1.tar.gz#md5=519d6c5729c34b6a78e23812f025731f (from https://pypi.python.org/simple/pyjwt/), version 0.1.1 doesn't match >=0.2.1
+  Using version 0.3.0 (newest of versions: 0.3.0, 0.2.3, 0.2.1)
+  Downloading PyJWT-0.3.0.tar.gz
+  Downloading from URL https://pypi.python.org/packages/source/P/PyJWT/PyJWT-0.3.0.tar.gz#md5=b31c56ea2f31020e4aafb74f06252a62 (from https://pypi.python.org/simple/pyjwt/)
+  Running setup.py egg_info for package PyJWT
+    running egg_info
+    creating pip-egg-info/PyJWT.egg-info
+    writing pip-egg-info/PyJWT.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/PyJWT.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/PyJWT.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/PyJWT.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/PyJWT.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/PyJWT.egg-info/SOURCES.txt'
+  Source in ./build/PyJWT has version 0.3.0, which satisfies requirement PyJWT>=0.2.1 (from python-social-auth)
+Downloading/unpacking python-openid>=2.2 (from python-social-auth)
+  Getting page http://pypi.python.org/simple/python-openid
+  URLs to search for versions for python-openid>=2.2 (from python-social-auth):
+  * http://pypi.python.org/simple/python-openid
+  Analyzing links from page https://pypi.python.org/simple/python-openid/
+    Found link https://pypi.python.org/packages/source/p/python-openid/python-openid-2.2.4.tar.gz#md5=ed112a07fde0b2b22ec35b1a8186f68f (from https://pypi.python.org/simple/python-openid/), version: 2.2.4
+    Found link https://pypi.python.org/packages/source/p/python-openid/python-openid-2.2.4.zip#md5=fdec8b18973e79bb1e716e9a68d38f81 (from https://pypi.python.org/simple/python-openid/), version: 2.2.4
+    Found link https://pypi.python.org/packages/source/p/python-openid/python-openid-2.2.5.tar.gz#md5=393f48b162ec29c3de9e2973548ea50d (from https://pypi.python.org/simple/python-openid/), version: 2.2.5
+    Found link https://pypi.python.org/packages/source/p/python-openid/python-openid-2.2.5.zip#md5=f89d9d4f4dccfd33b5ce34eb4725f751 (from https://pypi.python.org/simple/python-openid/), version: 2.2.5
+    Skipping link http://github.com/openid/python-openid (from https://pypi.python.org/simple/python-openid/); not a file
+    Skipping link http://github.com/openid/python-openid/tarball/2.2.4 (from https://pypi.python.org/simple/python-openid/); unknown archive format: .4
+    Skipping link http://github.com/openid/python-openid/tarball/2.2.5 (from https://pypi.python.org/simple/python-openid/); unknown archive format: .5
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.0.0
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.1.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.0.1
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.2.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.0.2
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.3.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.0.3
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.4.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.0.4
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.1.1.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.1.1
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-1.2.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 1.2.0
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-2.0.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 2.0.0
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-2.0.1.tgz (from https://pypi.python.org/simple/python-openid/), version: 2.0.1
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-2.1.0.tgz (from https://pypi.python.org/simple/python-openid/), version: 2.1.0
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-2.2.1.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 2.2.1
+    Found link http://openidenabled.com/files/python-openid/packages/python-openid-2.2.3.tar.gz (from https://pypi.python.org/simple/python-openid/), version: 2.2.3
+    Skipping link http://openidenabled.com/python-openid/ (from https://pypi.python.org/simple/python-openid/); not a file
+    Skipping link http://www.openidenabled.com/openid/libraries/python/ (from https://pypi.python.org/simple/python-openid/); not a file
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-2.1.0.tgz (from https://pypi.python.org/simple/python-openid/), version 2.1.0 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-2.0.1.tgz (from https://pypi.python.org/simple/python-openid/), version 2.0.1 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-2.0.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version 2.0.0 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.2.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.2.0 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.1.1.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.1.1 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.4.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.0.4 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.3.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.0.3 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.2.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.0.2 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.1.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.0.1 doesn't match >=2.2
+  Ignoring link http://openidenabled.com/files/python-openid/packages/python-openid-1.0.0.tar.gz (from https://pypi.python.org/simple/python-openid/), version 1.0.0 doesn't match >=2.2
+  Using version 2.2.5 (newest of versions: 2.2.5, 2.2.5, 2.2.4, 2.2.4, 2.2.3, 2.2.1)
+  Downloading from URL https://pypi.python.org/packages/source/p/python-openid/python-openid-2.2.5.tar.gz#md5=393f48b162ec29c3de9e2973548ea50d (from https://pypi.python.org/simple/python-openid/)
+  Running setup.py egg_info for package python-openid
+    running egg_info
+    creating pip-egg-info/python_openid.egg-info
+    writing pip-egg-info/python_openid.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/python_openid.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/python_openid.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/python_openid.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/python_openid.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching 'CHANGELOG'
+    warning: no files found matching '*.css' under directory 'doc'
+    warning: no files found matching '*.html' under directory 'doc'
+    writing manifest file 'pip-egg-info/python_openid.egg-info/SOURCES.txt'
+  Source in ./build/python-openid has version 2.2.5, which satisfies requirement python-openid>=2.2 (from python-social-auth)
+Downloading/unpacking requests-oauthlib>=0.3.0 (from python-social-auth)
+  Getting page http://pypi.python.org/simple/requests-oauthlib
+  URLs to search for versions for requests-oauthlib>=0.3.0 (from python-social-auth):
+  * http://pypi.python.org/simple/requests-oauthlib
+  Analyzing links from page https://pypi.python.org/simple/requests-oauthlib/
+    Skipping link https://pypi.python.org/packages/2.7/r/requests-oauthlib/requests_oauthlib-0.4.1-py2.py3-none-any.whl#md5=86d3d4d47d67cc9c9ad12bee2e2c3a39 (from https://pypi.python.org/simple/requests-oauthlib/); unknown archive format: .whl
+    Skipping link https://pypi.python.org/packages/2.7/r/requests-oauthlib/requests_oauthlib-0.4.2-py2.py3-none-any.whl#md5=0e51c9ce10f5eb53456911d4951f226e (from https://pypi.python.org/simple/requests-oauthlib/); unknown archive format: .whl
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.2.0.tar.gz#md5=ef04f3229ae62c61f5702cdfc0cb39d6 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.2.0
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.3.0.tar.gz#md5=7fb00175766308ed5cf40185304eb0c6 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.3.0
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.3.1.tar.gz#md5=dda4e29d8b12aa23fe9513179671709c (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.3.1
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.3.2.tar.gz#md5=35b3b750493c231145c39db0216813e7 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.3.2
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.3.3.tar.gz#md5=27aa20071880b16493e3e25a5f83cc32 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.3.3
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.4.0.tar.gz#md5=2649560205a02473998e0e7dd881ee5a (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.4.0
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.4.1.tar.gz#md5=4e5125f249580ae4f815d7291f505124 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.4.1
+    Found link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.4.2.tar.gz#md5=df930abe3971fb418c67a8545de54661 (from https://pypi.python.org/simple/requests-oauthlib/), version: 0.4.2
+    Skipping link http://python-requests.org (from https://pypi.python.org/simple/requests-oauthlib/); not a file
+  Ignoring link https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.2.0.tar.gz#md5=ef04f3229ae62c61f5702cdfc0cb39d6 (from https://pypi.python.org/simple/requests-oauthlib/), version 0.2.0 doesn't match >=0.3.0
+  Using version 0.4.2 (newest of versions: 0.4.2, 0.4.1, 0.4.0, 0.3.3, 0.3.2, 0.3.1, 0.3.0)
+  Downloading from URL https://pypi.python.org/packages/source/r/requests-oauthlib/requests-oauthlib-0.4.2.tar.gz#md5=df930abe3971fb418c67a8545de54661 (from https://pypi.python.org/simple/requests-oauthlib/)
+  Running setup.py egg_info for package requests-oauthlib
+    running egg_info
+    creating pip-egg-info/requests_oauthlib.egg-info
+    writing requirements to pip-egg-info/requests_oauthlib.egg-info/requires.txt
+    writing pip-egg-info/requests_oauthlib.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/requests_oauthlib.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/requests_oauthlib.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/requests_oauthlib.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    reading manifest file 'pip-egg-info/requests_oauthlib.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/requests_oauthlib.egg-info/SOURCES.txt'
+  Source in ./build/requests-oauthlib has version 0.4.2, which satisfies requirement requests-oauthlib>=0.3.0 (from python-social-auth)
+Installing collected packages: oauthlib, PyJWT, python-openid, python-social-auth, requests, requests-oauthlib, six
+  Running setup.py install for oauthlib
+    Running command /usr/bin/python -c "import setuptools; __file__='/vagrant/kfcdates/build/oauthlib/setup.py'; execfile('/vagrant/kfcdates/build/oauthlib/setup.py')" install --single-version-externally-managed --record /tmp/pip-Zlr3vS-record/install-record.txt --install-headers /vagrant/kfcdates/lib/include
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-x86_64-2.6
+    creating build/lib.linux-x86_64-2.6/oauthlib
+    copying oauthlib/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib
+    copying oauthlib/common.py -> build/lib.linux-x86_64-2.6/oauthlib
+    copying oauthlib/uri_validate.py -> build/lib.linux-x86_64-2.6/oauthlib
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth1
+    copying oauthlib/oauth1/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth2
+    copying oauthlib/oauth2/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/errors.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/parameters.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/request_validator.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/signature.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    copying oauthlib/oauth1/rfc5849/utils.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/errors.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/parameters.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/request_validator.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/tokens.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    copying oauthlib/oauth2/rfc6749/utils.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/access_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/authorization.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/pre_configured.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/request_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    copying oauthlib/oauth1/rfc5849/endpoints/resource.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/backend_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/legacy_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/mobile_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    copying oauthlib/oauth2/rfc6749/clients/web_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/authorization.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/pre_configured.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/resource.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/revocation.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    copying oauthlib/oauth2/rfc6749/endpoints/token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+    creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/authorization_code.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/client_credentials.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/implicit.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/refresh_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    copying oauthlib/oauth2/rfc6749/grant_types/resource_owner_password_credentials.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+    running install_lib
+    creating /usr/local/lib/python2.6/dist-packages/oauthlib
+    error: could not create '/usr/local/lib/python2.6/dist-packages/oauthlib': Permission denied
+    Complete output from command /usr/bin/python -c "import setuptools; __file__='/vagrant/kfcdates/build/oauthlib/setup.py'; execfile('/vagrant/kfcdates/build/oauthlib/setup.py')" install --single-version-externally-managed --record /tmp/pip-Zlr3vS-record/install-record.txt --install-headers /vagrant/kfcdates/lib/include:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.linux-x86_64-2.6
+
+creating build/lib.linux-x86_64-2.6/oauthlib
+
+copying oauthlib/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib
+
+copying oauthlib/common.py -> build/lib.linux-x86_64-2.6/oauthlib
+
+copying oauthlib/uri_validate.py -> build/lib.linux-x86_64-2.6/oauthlib
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth1
+
+copying oauthlib/oauth1/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth2
+
+copying oauthlib/oauth2/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/errors.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/parameters.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/request_validator.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/signature.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+copying oauthlib/oauth1/rfc5849/utils.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/errors.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/parameters.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/request_validator.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/tokens.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+copying oauthlib/oauth2/rfc6749/utils.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/access_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/authorization.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/pre_configured.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/request_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+copying oauthlib/oauth1/rfc5849/endpoints/resource.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth1/rfc5849/endpoints
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/backend_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/legacy_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/mobile_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+copying oauthlib/oauth2/rfc6749/clients/web_application.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/clients
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/authorization.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/pre_configured.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/resource.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/revocation.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+copying oauthlib/oauth2/rfc6749/endpoints/token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/endpoints
+
+creating build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/__init__.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/authorization_code.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/base.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/client_credentials.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/implicit.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/refresh_token.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+copying oauthlib/oauth2/rfc6749/grant_types/resource_owner_password_credentials.py -> build/lib.linux-x86_64-2.6/oauthlib/oauth2/rfc6749/grant_types
+
+running install_lib
+
+creating /usr/local/lib/python2.6/dist-packages/oauthlib
+
+error: could not create '/usr/local/lib/python2.6/dist-packages/oauthlib': Permission denied
+
+----------------------------------------
+Command /usr/bin/python -c "import setuptools; __file__='/vagrant/kfcdates/build/oauthlib/setup.py'; execfile('/vagrant/kfcdates/build/oauthlib/setup.py')" install --single-version-externally-managed --record /tmp/pip-Zlr3vS-record/install-record.txt --install-headers /vagrant/kfcdates/lib/include failed with error code 1
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 252, in main
+    self.run(options, args)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 410, in run
+    requirement_set.install(install_options)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 2017, in install
+    requirement.install(install_options)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 1515, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/lib/python2.6/dist-packages/pip.py", line 3543, in call_subprocess
+    % (command_desc, proc.returncode))
+InstallationError: Command /usr/bin/python -c "import setuptools; __file__='/vagrant/kfcdates/build/oauthlib/setup.py'; execfile('/vagrant/kfcdates/build/oauthlib/setup.py')" install --single-version-externally-managed --record /tmp/pip-Zlr3vS-record/install-record.txt --install-headers /vagrant/kfcdates/lib/include failed with error code 1

@@ -186,20 +186,31 @@ def index(request):
     return render_to_response('core/index.html', context)
 
 
-def test_users(request, user_id):
+def test_users(request):
 
     params = request.GET.get('id', None)
-    #print "PARAMS + " , user_id,   
+    print "PARAMS + " , params  
+    print "UserID", request.user.id
+
+
 
     
-
-    o = db.users.find_one({"id": int(user_id) })
-    if o:
-        o['_id'] = str(o['_id'])
-    
-    #o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
-    a = [o,]
-    c = {'user': o}
+    if (params != None):
+        try:
+            o = db.users.find_one({"id": int(params) });
+            if o:
+                o['_id'] = str(o['_id'])
+                c = {'users': [o]}
+        except ValueError:
+            try:
+                o = db.users.find_one({"id": int(request.user.id) });
+                o['_id'] = str(o['_id'])
+                c = {'users': [o]}
+            except TypeError:
+                return redirect('login')
+    else:
+        o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
+        c = {'users' : o}
 
 
     data = json.dumps(c)
