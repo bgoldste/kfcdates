@@ -214,7 +214,10 @@ def proposals(request):
                     #data = json.dumps(kfc_date)
                     #return HttpResponse(data, mimetype='application/json')
                     message = "You are confirmed for a date on " + kfc_date['date'] + ' - ' + kfc_date['time'] + " at " + kfc_date['address']
-                    confirmation_email('Date Confirmation', message , kfc_date['buyer'], kfc_date['recipient'])
+                    try:
+                        confirmation_email('Date Confirmation', message , kfc_date['buyer'], kfc_date['recipient'])
+                    except:
+                        pass
                     return HttpResponse(status=200);
         except AttributeError:
             pass
