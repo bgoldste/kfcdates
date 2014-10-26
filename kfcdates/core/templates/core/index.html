@@ -29,9 +29,11 @@
   <link href='/static/css/normalize.css' rel='stylesheet' type='text/css'>
   <link href='/static/css/style.css' rel='stylesheet' type='text/css'>
 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
-<body>{% verbatim %}
+<body>
+  {% verbatim %}
   <script type="text/x-handlebars">
    {{outlet}}
   </script>
@@ -64,14 +66,20 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="setup">
-    setup
-    {{slot.address}}
+
     <div id="date-map"></div>
+    <br/>
+    {{slot.kfcAddress}}
+    <br/>
+    {{eui-selectdate style="default" placeholder="Select a date" value=slot.moment}}
+    {{eui-select placeholder='Select a time' options=times value=slot.time}}
     <br/><br/>
-    {{eui-selectdate style="default" placeholder="Select a date"}}
-    {{eui-select placeholder='Select a time' options=times}}
-    <br/><br/>
-    {{eui-button label='invite' action='invite' style='primary'}}
+    {{eui-button label='invite' action='invite' style='primary' disabled=isDisabled}}
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="waiting">
+    waiting
   </script>
 
   <script type="text/x-handlebars" data-template-name="confirmation">
@@ -84,12 +92,6 @@
 
   <script type="text/x-handlebars" data-template-name="date">
     my date coming up - details
-      {{#each meetup in meetups}}
-        {{meetup.address}}
-      {{else}}
-        ...
-      {{/each}}
-    
   </script>
 
   <script type="text/x-handlebars" data-template-name="slot">
@@ -98,10 +100,21 @@
 
   <script type="text/x-handlebars" data-template-name="dates">
     my dates coming up - list
+    {{#each date in dates}}
+        {{date.address}}
+      {{else}}
+        ...
+      {{/each}}
   </script>
 
-  <script type="text/x-handlebars" data-template-name="proposals">
+  <script type="text/x-handlebars" data-template-name="proposal">
     my list of offers to buy me kfc
+    {{#each}}
+      {{date}} {{time}}
+      {{#each b in buyer}}
+        {{b.firstname}} {{b.lastname}}
+      {{/each}}
+    {{/each}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="template">
@@ -294,7 +307,7 @@
 
   
 </script>
-<script src="/static/js/app.js"></script>
+<script src="/static/js/static.js"></script>
 {% endverbatim %}
 </body>
 </html>
