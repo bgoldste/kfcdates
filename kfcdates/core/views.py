@@ -22,10 +22,15 @@ if getattr(settings, "MONGODB_USERNAME", None):
 
 
 def get_user_pic(uid):
-
 	url = "http://graph.facebook.com/%s/picture?type=large" % uid
 	pic = requests.get(url)
 	return pic.url
+
+
+def get_user_gender(first_name):
+    url = "http://api.genderize.io?name=%s" % first_name
+    r = requests.get(url)
+    return r.json()['gender']
 
 
 # Create your views here.
@@ -40,7 +45,8 @@ def login(request):
                         new_mongo_user = {
                             "uid": a['uid'],
                             "name": request.user.first_name + " " + request.user.last_name[0] + ".",
-                            "pic": get_user_pic(a['uid'])
+                            "pic": get_user_pic(a['uid']),
+                            "gender": get_user_gender(request.user.first_name)
                         }
                         db.users.insert(new_mongo_user)
 
@@ -68,10 +74,32 @@ def home(request):
     context = RequestContext(request)
     user = request.user
 
-    print request.user.first_name
-  
-
-    #context['user'] = user.facebook_name
-    #context['gender'] = user.gender
-
     return render_to_response('core/home.html', context)
+
+
+def create_date(request):
+    context = RequestContext(request)
+
+    kfc_date = None
+
+    try:
+        for a in request.user.social_auth.values():
+            if a['provider'] == 'facebook':
+                time = request.GET.get('time', '')
+                location = request.GET.get('location', '')
+
+                new_date = {
+                                "buyer": a['uid'],
+                                "time": time,
+                                "location": location
+                            }
+                date_id = db.dates.insert(new_date)
+                kfc_date = db.dates.find_one({"_id" : date_id})
+
+
+    except AttributeError:
+        pass
+
+    data = json.dumps(kfc_date)
+
+    return HttpResponse(data, mimetype='application/json')
