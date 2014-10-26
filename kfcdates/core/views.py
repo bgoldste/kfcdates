@@ -10,6 +10,8 @@ from pymongo import Connection
 from datetime import datetime
 import requests
 
+from django.contrib.auth import logout as auth_logout
+
 db = Connection(
     host=getattr(settings, "MONGODB_HOST", None),
     port=getattr(settings, "MONGODB_PORT", None)
@@ -50,6 +52,7 @@ def login(request):
     			    
                     context['pic'] = uid #request.get("http://graph.facebook.com/%s/picture" % uid)
 
+                    return redirect('home')
 	   	
                 
     except AttributeError:
@@ -57,9 +60,15 @@ def login(request):
 
     return render_to_response('core/login.html', context)
 
+def logout(request):
+    auth_logout(request)
+    return redirect('login')
+
 def home(request):
     context = RequestContext(request)
     user = request.user
+
+    print request.user.first_name
   
 
     #context['user'] = user.facebook_name
