@@ -278,22 +278,26 @@ def slots(request):
 @csrf_exempt
 def dates(request):
     if request.method == "DELETE":
-        data = json.loads(request.body)['date']
-        kfc_date = db.dates.remove({"_id" : data['id']})
+        params = request.path.split("/")[2]
+        print params
+        db.dates.remove({"_id" : ObjectId(params)})
         return HttpResponse(status=200);
     else:
         for a in request.user.social_auth.values():
             if a['provider'] == 'facebook':
                 kfc_date = db.dates.find_one({'$and':[{'$or': [{'buyer' : a['uid']}, {'recipient' : a['uid']}]}, {'state': 'accepted'}]})
-                kfc_date['_id'] = str(kfc_date['_id'])
-                kfc_date['id'] = str(kfc_date['_id'])
-                kfc_date['buyer'] = [kfc_date['buyer']]
-                try:
-                    kfc_date['recipient'] = [kfc_date['recipient']]
-                except:
-                    kfc_date['recipient'] = []
-                    pass
-                data = json.dumps({'dates' : [kfc_date]})
+                if kfc_date:
+                    kfc_date['_id'] = str(kfc_date['_id'])
+                    kfc_date['id'] = str(kfc_date['_id'])
+                    kfc_date['buyer'] = [kfc_date['buyer']]
+                    try:
+                        kfc_date['recipient'] = [kfc_date['recipient']]
+                    except:
+                        kfc_date['recipient'] = []
+                        pass
+                    data = json.dumps({'dates' : [kfc_date]})
+                else: 
+                    data = json.dumps({'dates' : []})
                 return HttpResponse(data, mimetype='application/json')
     return HttpResponse(status=200);
 
