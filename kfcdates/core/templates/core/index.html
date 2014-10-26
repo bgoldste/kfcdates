@@ -54,22 +54,34 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="profile">
-   <h1>profile</h1>
-   <p>{{user.firstname}} {{user.lastname}}</p>
+  <h3 style="color: gray;" class = "text-center">You</h3>
+  
+   <h1 class = 'text-center' style='color:#8099E6'>{{user.firstname}} {{user.lastname}}</h1>
+   
 
-   <p><img {{bind-attr src=user.photoURL}}/></p>
-   <p>radio select 
+  <img {{bind-attr src=user.photoURL}}/ class = "img-square center-block img-responsive">
+<br>
+  <p class= 'text-center' style ='color:gray;'>Will be:</p>
+  <br>
+   <p class= 'text-center'>
    {{#if user.isBuyer}}
-    <button>Buyer OK</button>
-    <button {{action 'makeRecipient'}}>Recipient NO</button>
-    {{#link-to 'setup'}}Next{{/link-to}}
+    <button class = 'btn btn-success'>Buyin' dat chicken</button>
+    <button class = 'btn btn-danger'{{action 'makeRecipient'}}>Eatin' dat chicken</button>
+    
    {{else}}
-    <button {{action 'makeBuyer'}}>Buyer NO</button>
-    <button>Recipient OK</button>
-    {{#link-to 'proposal'}}Next{{/link-to}}
-   {{/if}}
-   buyer seller
-   </p>
+    <button class = 'btn btn-danger'{{action 'makeBuyer'}}>Buyin' dat chicken</button>
+    <button class = 'btn btn-success'>Eatin' dat chicken</button>
+      {{/if}}
+     </p>
+     <br><br>
+      
+    {{#link-to 'proposal' class="btn btn-primary center-block"}}Next{{/link-to}}
+
+ 
+ 
+
+
+   </div>
 
   </script>
 
@@ -78,15 +90,15 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="setup">
-
+  <h4 class ='text-center' style ='color:gray;'>Setup a meeting</h4>
     <div id="date-map"></div>
-    <br/>
+    
     {{slot.kfcAddress}}
-    <br/>
+    <br>
     {{eui-selectdate style="default" placeholder="Select a date" value=slot.moment}}
     {{eui-select placeholder='Select a time' options=times value=slot.time}}
-    <br/><br/>
-    {{eui-button label='invite' action='invite' style='primary' disabled=isDisabled}}
+   
+    {{eui-button label='invite' action='invite' style='primary' }}
   </script>
 
 
@@ -120,7 +132,7 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="proposal">
-    my list of offers to buy me kfc
+   <h3 class='text-center'> My dates</h3>
     {{#each}}
       {{date}} {{time}}
       {{#each b in buyer}}
