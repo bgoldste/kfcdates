@@ -10,14 +10,14 @@ Ember.Application.initializer({
 App = Ember.Application.create();
 
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://localhost:8000'
+    host: 'http://kfc.fastfooddates.com'
 });
 
 //App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
 App.ApplicationStore = DS.Store.extend({
   revision: 11,
-  url: "http://localhost:8000"
+  url: "http://kfc.fastfooddates.com"
 });
 
 
@@ -151,10 +151,13 @@ App.SetupRoute = Ember.Route.extend({
 	model: function() {
 		return Ember.RSVP.hash({
 			users: this.store.find('user', {id: null}),
-			slot: this.store.createRecord('slot')
+			slot: this.store.createRecord('slot'),
+			dates: this.store.find('date')
 		});
 	},
-	afterModel: function (model) {
+	afterModel: function(model) {
+		if (model.dates && model.dates.content && model.dates.content.length > 0)
+			this.transitionTo('confirmation');
 		model.user = model.users.get('firstObject');
 	}
 });
@@ -244,11 +247,18 @@ App.SetupController = Ember.ObjectController.extend({
 
 App.ProposalRoute = Ember.Route.extend({
 	model: function() {
-		return this.store.find('proposal');
+		return Ember.RSVP.hash({
+			proposals: this.store.find('proposal'),
+			dates: this.store.find('date')
+		});
+	},
+	afterModel: function(model) {
+		if (model.dates && model.dates.content && model.dates.content.length > 0)
+			this.transitionTo('confirmation');
 	}
 });
 
-App.ProposalController = Ember.ArrayController.extend({
+App.ProposalController = Ember.ObjectController.extend({
 	actions: {
 		acceptDate: function (id) {
 			proposal = this.store.getById('proposal',id);
