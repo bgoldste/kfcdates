@@ -58,9 +58,9 @@ App.User = DS.Model.extend({
 	isBuyer: DS.attr('', {defaultValue: ''}),
 	isRecipient: DS.attr('', {defaultValue: ''}),
 	email: DS.attr('', {defaultValue: ''}),
-	slots: DS.hasMany('slot', { async: true }),
-	proposals: DS.hasMany('proposals', { async: true }),
-	dates: DS.hasMany('date', { async: true })
+	slots: DS.hasMany('slot', { async: true , inverse: 'buyer'}),
+	proposals: DS.hasMany('proposals', { async: true, inverse: 'recipient' }),
+	dates: DS.hasMany('date', { async: true, inverse: null })
 });
 
 App.Meetup = DS.Model.extend({

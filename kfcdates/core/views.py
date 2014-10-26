@@ -196,6 +196,10 @@ def proposals(request):
             if a['provider'] == 'facebook':
                 kfc_dates_iterator = db.dates.find({"recipient" : None})
                 for kfc_date in kfc_dates_iterator:
+                    kfc_date['_id'] = str(kfc_date['_id'])
+                    kfc_date['id'] = kfc_date['_id']
+                    kfc_date['recipient'] = []
+                    kfc_date['buyer'] = [kfc_date['buyer']]
                     kfc_dates.append(kfc_date)
 
     except AttributeError:
@@ -210,16 +214,16 @@ def slots(request):
     if request.method == "POST":
         context = RequestContext(request)
         kfc_date = None
-        print request
+        #print request.body
         try:
             for a in request.user.social_auth.values():
                 if a['provider'] == 'facebook':
-                    location_latitude = request.POST.get('locationLatitude', '')
-                    location_longitude = request.POST.get('locationLongitude', '')
-                    address = request.POST.get('address', '')
-                    date = request.POST.get('date', '')
-                    time = request.POST.get('time', '')
-
+                    data = json.loads(request.body)['slot']
+                    location_longitude = data['locationLongitude']
+                    location_latitude = data['locationLatitude']
+                    address = data['address']
+                    date = data['date']
+                    time = data['time']
                     new_date = {
                                     "locationLatitude": location_latitude,
                                     "locationLongitude": location_longitude,
@@ -228,18 +232,19 @@ def slots(request):
                                     "date": date,
                                     "time": time,
                                     "state": "new",
-                                    "recipient": None,
+                                    #"recipient": [],
                                 }
                     date_id = db.dates.insert(new_date)
-                    kfc_date = db.dates.find_one({"_id" : date_id})
-
-
+                    #kfc_date = db.dates.find_one({"_id" : date_id})
+                    #data = json.dumps(kfc_date)
+                    #return HttpResponse(data, mimetype='application/json')
+                    return HttpResponse(status=201);
         except AttributeError:
             pass
+    return HttpResponse(status=200);
+    
 
-        data = json.dumps(kfc_date)
-        #return HttpResponse(data, mimetype='application/json')
-    return HttpResponse(status=201);
+
 
 
 
