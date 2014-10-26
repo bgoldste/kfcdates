@@ -145,9 +145,12 @@ App.ProfileController = Ember.ObjectController.extend({
 App.SetupRoute = Ember.Route.extend({
 	model: function() {
 		return Ember.RSVP.hash({
-			user: this.store.find('user', {id: null}),
+			users: this.store.find('user', {id: null}),
 			slot: this.store.createRecord('slot')
 		});
+	},
+	afterModel: function (model) {
+		model.user = model.users.get('firstObject');
 	}
 });
 
