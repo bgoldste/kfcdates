@@ -6,16 +6,14 @@ body
 .ember-application {
     margin: 20px;
 }
-* {
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    -webkit-transform: none !important;
-  }
+
   #date-map {
   	width: 400px;
   	height: 400px;
   }
 
   /* Fixes weird emberui bug */
+.eui-option,
 .eui-input.eui-medium input,
 .eui-input.eui-medium textarea,
 .eui-textarea.eui-medium input,
