@@ -19,7 +19,7 @@
   </head>
   <body>
     <header style= "height:300px;">
-      <h2>nCog</h2>
+      <h2>KFC Dates</h2>
      <hr> 
     </header>
     <div id="join" class="current">
@@ -33,15 +33,7 @@
         <h1 class="smallMargin">See who likes you <br>and who doesn't</h1>
         <h3 class="lightText">and how to <span style= "color:red;">change </span>their mind</h3>
         <br />
-				<!-- <a class="button next facebook">Analyze my Facebook friends</a> -->
-				{% include 'django_facebook/_facebook_js.html' %}
-        <form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
-            <input type="hidden" value="{% url 'home' %}" name="next" />
-            <input type="hidden" value="{{ request.path }}" name="register_next" />
-            <input type="hidden" value="{{ request.path }}" name="error_next" />
-            {% csrf_token %}
-            <input class="button facebook" onclick="F.connect(this.parentNode); return false;" value="show me"/>
-        </form>        
+				<!-- <a class="button next facebook">Analyze my Facebook friends</a> -->     
         <h5 ><span class="lock"></span>Totally Anonymous. Always.</h5>  
         <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>    
       </div>
