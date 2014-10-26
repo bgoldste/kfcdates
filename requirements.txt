@@ -24,5 +24,4 @@ redis==2.10.1
 requests==2.4.3
 requests-oauthlib==0.4.2
 six==1.7.3
-ufw==0.30pre1-0ubuntu2
 wsgiref==0.1.2
