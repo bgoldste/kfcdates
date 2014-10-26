@@ -177,7 +177,8 @@ def test_users(request):
                 o = db.users.find_one({"facebookID": str(params) });
                 if o:
                     o['_id'] = str(o['_id'])
-                    c = {'user': o}
+                    o['id'] = str(o['facebookID'])
+                    c = {'users': o}
         except ValueError:
             try:
                 o = db.users.find_one({"id": int(request.user.id) });
