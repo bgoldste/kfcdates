@@ -141,7 +141,7 @@ def create_date(request):
                 new_date = {
                                 "locationLatitude": location_latitude,
                                 "locationLongitude": location_longitude,
-                                "address": address
+                                "address": address,
                                 "buyer": a['uid'],
                                 "date": date,
                                 "time": time,
@@ -180,6 +180,10 @@ def join_date(request):
     data = json.dumps(kfc_date)
 
     return HttpResponse(data, mimetype='application/json')
+
+def index(request):
+    context = RequestContext(request)
+    return render_to_response('core/index.html', context)
 
 
 def test_users(request):
