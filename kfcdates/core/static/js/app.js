@@ -279,11 +279,22 @@ App.ConfirmationRoute = Ember.Route.extend({
 		});
 	},
 	afterModel: function(model) {
-		model.date = model.dates.get('firstObject');
+		if (model.dates)
+			model.date = model.dates.get('firstObject');
 	}
 });
 
-
+App.ConfirmationController = Ember.ObjectController.extend({
+	actions: {
+		cancelDate: function (id) {
+			kfc_date = this.get('model.date');
+			kfc_date.deleteRecord();
+			kfc_date.save();
+			
+			//this.transitionToRoute('confirmation'); 
+		}
+	}
+});
 
 // App.ArticleController = Ember.ObjectController.extend({
 // 	// Title: function (key, value, previousValue) {
