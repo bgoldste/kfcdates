@@ -19,6 +19,13 @@ if getattr(settings, "MONGODB_USERNAME", None):
     db.authenticate(getattr(settings, "MONGODB_USERNAME", None), getattr(settings, "MONGODB_PASSWORD", None))
 
 
+def get_user_pic(uid):
+
+	url = "http://graph.facebook.com/%s/picture?type=large" % uid
+	pic = requests.get(url)
+	return pic.url
+
+
 # Create your views here.
 def login(request):
     context = RequestContext(request)
@@ -30,7 +37,8 @@ def login(request):
                     if not mongo_user:
                         new_mongo_user = {
                             "uid": a['uid'],
-                            "name": request.user.first_name + " " + request.user.last_name
+                            "name": request.user.first_name + " " + request.user.last_name[0] + ".",
+                            "pic": get_user_pic(a['uid'])
                         }
                         db.users.insert(new_mongo_user)
 
