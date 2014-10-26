@@ -195,8 +195,27 @@ def test_users(request):
 
     return HttpResponse(data, mimetype='application/json')
 
-
+@csrf_exempt
 def proposals(request):
+    if request.method == "PUT":
+        params = request.path.split("/")[2]
+        context = RequestContext(request)
+        kfc_date = None
+        print request.body
+        try:
+            for a in request.user.social_auth.values():
+                if a['provider'] == 'facebook':
+                    kfc_date = db.dates.find_one({"_id" : ObjectId(params)})
+                    kfc_date['recipient'] = a['uid']
+                    kfc_date['state'] = 'accepted'
+                    db.dates.save(kfc_date)
+                    #kfc_date = db.dates.find_one({"_id" : date_id})
+                    #data = json.dumps(kfc_date)
+                    #return HttpResponse(data, mimetype='application/json')
+                    return HttpResponse(status=200);
+        except AttributeError:
+            pass
+
     context = RequestContext(request)
 
     kfc_dates = []
@@ -255,32 +274,14 @@ def slots(request):
     
 @csrf_exempt
 def dates(request):
-    if request.method == "PUT":
-        context = RequestContext(request)
-        kfc_date = None
-        #print request.body
-        try:
-            for a in request.user.social_auth.values():
-                if a['provider'] == 'facebook':
-                    data = json.loads(request.body)['date']
-                    kfc_date = db.dates.find_one({"_id" : data['id']})
-                    kfc_date['recipient'] = a['uid']
-                    kfc_date['state'] = 'accepted'
-                    db.dates.save(kfc_date)
-                    #kfc_date = db.dates.find_one({"_id" : date_id})
-                    #data = json.dumps(kfc_date)
-                    #return HttpResponse(data, mimetype='application/json')
-                    return HttpResponse(status=200);
-        except AttributeError:
-            pass
-    elif request.method == "DELETE":
+    if request.method == "DELETE":
         data = json.loads(request.body)['date']
         kfc_date = db.dates.remove({"_id" : data['id']})
         return HttpResponse(status=200);
     else:
         for a in request.user.social_auth.values():
             if a['provider'] == 'facebook':
-                kfc_date = db.dates.find_one({'$and':[{'$or': [{'buyer' : a['uid']}, {'recipient' : a['uid']}]}, {'state': 'new'}]})
+                kfc_date = db.dates.find_one({'$and':[{'$or': [{'buyer' : a['uid']}, {'recipient' : a['uid']}]}, {'state': 'accepted'}]})
                 kfc_date['_id'] = str(kfc_date['_id'])
                 kfc_date['id'] = str(kfc_date['_id'])
                 kfc_date['buyer'] = [kfc_date['buyer']]
