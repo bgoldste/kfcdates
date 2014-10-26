@@ -261,10 +261,14 @@ App.ProposalRoute = Ember.Route.extend({
 App.ProposalController = Ember.ObjectController.extend({
 	actions: {
 		acceptDate: function (id) {
+			var _this = this;
 			proposal = this.store.getById('proposal',id);
 			proposal.set('state','accepted');
 			proposal.save();
-			this.transitionToRoute('confirmation'); 
+			Ember.run.later(myContext, function() {
+				_this.transitionToRoute('confirmation');   
+			}, 750);
+			
 		}
 	}
 });
