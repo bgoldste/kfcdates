@@ -23,7 +23,7 @@ App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
 App.set('deferredMap', Ember.RSVP.defer());
 MapInitialize = function() {
-	App.get('deferredMap').resolve("Map Loaded");
+	App.get('deferredMap').resolve("Map Loaded");	 
 }
 function OnMapUpdate(map, event, center, viewport) {
     if (event.eventType == "MARKER_CLICKED") {
@@ -41,9 +41,10 @@ App.Router.map(function() {
   this.route('setup');
   this.route('confirmation');
   this.route('dates');
-  this.route('proposals');
+  this.route('proposal');
   this.route('slots');
   this.route('date');
+  this.route('waiting');
 });
 
 App.User = DS.Model.extend({  	
@@ -57,7 +58,9 @@ App.User = DS.Model.extend({
 	isBuyer: DS.attr('', {defaultValue: ''}),
 	isRecipient: DS.attr('', {defaultValue: ''}),
 	email: DS.attr('', {defaultValue: ''}),
-	meetups: DS.hasMany('meetup', { async: true })
+	slots: DS.hasMany('slot', { async: true }),
+	proposals: DS.hasMany('proposals', { async: true }),
+	dates: DS.hasMany('date', { async: true })
 });
 
 App.Meetup = DS.Model.extend({
@@ -67,18 +70,39 @@ App.Meetup = DS.Model.extend({
 	date: DS.attr('', {defaultValue: ''}),
 	time: DS.attr('', {defaultValue: ''}),
 	state: DS.attr('', {defaultValue: ''}),
-	buyer: DS.hasMany('meetup', { async: true }),
-	recipient: DS.hasMany('meetup', { async: true })
+	buyer: DS.hasMany('user', { async: true }),
+	recipient: DS.hasMany('user', { async: true }),
+	kfcAddress: function() {
+		if (this.get('address'))
+			return 'KFC - ' + this.get('address');
+	}.property('address'),
+	moment: function (key, value, previousValue) {
+		 if (arguments.length > 1 && value) {
+		  this.set('date', moment(value*1000).format("MM/DD/YYYY"));
+		}
+		if (moment(this.get('date'), ["MM/DD/YYYY"], true).isValid())
+			return moment(this.get('date'), ["MM/DD/YYYY"]);
+		else
+			return '';
+	}.property('date')
 });
 
 App.Slot = App.Meetup.extend({});
 App.Proposal = App.Meetup.extend({});
-App.FastFoodDate = App.Meetup.extend({});
+App.Date = App.Meetup.extend({});
 
-App.FastFoodDate.reopenClass({
+App.Date.reopenClass({
   FIXTURES: [
-    { id: 55, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc down the road', time: '11:30', date: '01/01/2015', state: 'booked', buyer: 1, recipient: 2 },
-    { id: 44, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc up the road', time: '12:30', date: '01/01/2015', state: 'booked', buyer: 1, recipient: 3 },
+    { id: 55, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc down the road', time: '11:30', date: '01/01/2015', state: 'booked', buyer: [1], recipient: [2] },
+    { id: 44, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc up the road', time: '12:30', date: '01/01/2015', state: 'booked', buyer: [1], recipient: [3] },
+  ]
+});
+
+
+App.Proposal.reopenClass({
+  FIXTURES: [
+    { id: 66, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc down the road', time: '11:30', date: '01/01/2015', state: 'proposed', buyer: [1] },
+    { id: 77, locationLatitude: '61.4', locationLongitude: '120.2', address: 'kfc up the road', time: '12:30', date: '01/01/2015', state: 'proposed', buyer: [1] },
   ]
 });
 
@@ -192,14 +216,24 @@ App.SetupController = Ember.ObjectController.extend({
 	  { label: '21:30', value: '2130' },
 	  { label: '22:00', value: '2200' }
 	],
+	isDisabled: function () {
+		return !(this.get('model.slot.locationLatitude') && this.get('model.slot.locationLongitude') && this.get('model.slot.time') && this.get('model.slot.date'))
+	}.property('model.slot.locationLatitude','model.slot.locationLatitude','model.slot.date','model.slot.time'),
 	actions: {
 		invite: function () {
-			console.log('hi')
+			this.get('model.slot').save();
+			this.transitionToRoute('waiting');
 		}
 	}
 
 });
 
+
+App.ProposalRoute = Ember.Route.extend({
+	model: function() {
+		return this.store.find('proposal');
+	}
+});
 
 
 
