@@ -136,12 +136,12 @@ App.ProfileRoute = Ember.Route.extend({
 App.ProfileController = Ember.ObjectController.extend({
 	actions: {
 		makeBuyer: function () {
-			this.set('model.isBuyer', true);
-			this.set('model.isRecipient', false);
+			this.set('model.user.isBuyer', true);
+			this.set('model.user.isRecipient', false);
 		},
 		makeRecipient: function() {
-			this.set('model.isBuyer', false);
-			this.set('model.isRecipient', true);
+			this.set('model.user.isBuyer', false);
+			this.set('model.user.isRecipient', true);
 		}
 	}
 });
@@ -235,7 +235,7 @@ App.SetupController = Ember.ObjectController.extend({
 	actions: {
 		invite: function () {
 			this.get('model.slot').save();
-			this.transitionToRoute('waiting');
+			//this.transitionToRoute('waiting');
 		}
 	}
 

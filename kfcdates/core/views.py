@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from open_facebook import OpenFacebook
 import json
 from django.conf import settings
@@ -124,40 +125,7 @@ def get_random_dates(request):
     return HttpResponse(data, mimetype='application/json')
 
 
-def create_date(request):
-    context = RequestContext(request)
 
-    kfc_date = None
-
-    try:
-        for a in request.user.social_auth.values():
-            if a['provider'] == 'facebook':
-                location_latitude = request.GET.get('locationLatitude', '')
-                location_longitude = request.GET.get('locationLongitude', '')
-                address = request.GET.get('address', '')
-                date = request.GET.get('date', '')
-                time = request.GET.get('time', '')
-
-                new_date = {
-                                "locationLatitude": location_latitude,
-                                "locationLongitude": location_longitude,
-                                "address": address,
-                                "buyer": a['uid'],
-                                "date": date,
-                                "time": time,
-                                "state": "new",
-                                "buyer": a['uid'],
-                            }
-                date_id = db.dates.insert(new_date)
-                kfc_date = db.dates.find_one({"_id" : date_id})
-
-
-    except AttributeError:
-        pass
-
-    data = json.dumps(kfc_date)
-
-    return HttpResponse(data, mimetype='application/json')
 
 def join_date(request):
     context = RequestContext(request)
@@ -218,24 +186,60 @@ def test_users(request):
     return HttpResponse(data, mimetype='application/json')
 
 
-def proposals(request, proposals):
-    print proposals
-    params = request.GET.get('id', None)
-    #print "PARAMS + " , user_id,   
+def proposals(request):
+    context = RequestContext(request)
 
-    
+    kfc_dates = []
 
-    o = db.dates.find_one({"id": int(proposals) })
-    if o:
-        o['_id'] = str(o['_id'])
-    
-    #o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
-    a = [o,]
-    c = {'user': o}
+    try:
+        for a in request.user.social_auth.values():
+            if a['provider'] == 'facebook':
+                kfc_dates_iterator = db.dates.find({"recipient" : None})
+                for kfc_date in kfc_dates_iterator:
+                    kfc_dates.append(kfc_date)
 
+    except AttributeError:
+        pass
 
-    data = json.dumps(c)
+    data = json.dumps({'proposals' : kfc_dates})
 
     return HttpResponse(data, mimetype='application/json')
+
+@csrf_exempt
+def slots(request):
+    if request.method == "POST":
+        context = RequestContext(request)
+        kfc_date = None
+        print request
+        try:
+            for a in request.user.social_auth.values():
+                if a['provider'] == 'facebook':
+                    location_latitude = request.POST.get('locationLatitude', '')
+                    location_longitude = request.POST.get('locationLongitude', '')
+                    address = request.POST.get('address', '')
+                    date = request.POST.get('date', '')
+                    time = request.POST.get('time', '')
+
+                    new_date = {
+                                    "locationLatitude": location_latitude,
+                                    "locationLongitude": location_longitude,
+                                    "address": address,
+                                    "buyer": a['uid'],
+                                    "date": date,
+                                    "time": time,
+                                    "state": "new",
+                                    "recipient": None,
+                                }
+                    date_id = db.dates.insert(new_date)
+                    kfc_date = db.dates.find_one({"_id" : date_id})
+
+
+        except AttributeError:
+            pass
+
+        data = json.dumps(kfc_date)
+        #return HttpResponse(data, mimetype='application/json')
+    return HttpResponse(status=201);
+
 
 
