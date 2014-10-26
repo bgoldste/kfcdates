@@ -312,7 +312,12 @@ def confirmation_email(subject, message, buyer_facebook_id, seller_facebook_id):
 
     send_mail(subject, message, 'dates@kfc.fastfooddates.com', [buyer['email'], seller['email']])
 
+def clear(request):
+    context = RequestContext(request)
+    db.users.remove()
+    db.dates.remove()
 
+    return redirect('login')
 
 
 
