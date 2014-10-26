@@ -9,16 +9,16 @@ Ember.Application.initializer({
 
 App = Ember.Application.create();
 
-// App.ApplicationAdapter = DS.RESTAdapter.extend({
-    // host: 'http://fastfooddates.com'
-// });
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+    host: 'http://localhost:8000'
+});
 
-App.ApplicationAdapter = DS.FixtureAdapter.extend({});
+//App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
-// App.Store = DS.Store.extend({
-//   revision: 11,
-//   url: "http://fastfooddates.com"
-// });
+App.Store = DS.Store.extend({
+  revision: 11,
+  url: "http://localhost:8000"
+});
 
 
 App.set('deferredMap', Ember.RSVP.defer());
@@ -119,7 +119,7 @@ App.User.reopenClass({
 
 App.ProfileRoute = Ember.Route.extend({
 	model: function() {
-		return this.store.find('user', 1);
+		return this.store.find('user', {id: null});
 	}
 });
 
@@ -140,7 +140,7 @@ App.ProfileController = Ember.ObjectController.extend({
 App.SetupRoute = Ember.Route.extend({
 	model: function() {
 		return Ember.RSVP.hash({
-			user: this.store.find('user', 1),
+			user: this.store.find('user', {id: null}),
 			slot: this.store.createRecord('slot')
 		});
 	}
