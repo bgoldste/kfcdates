@@ -1,0 +1,34 @@
+body
+{
+    padding: 20px 0;
+}
+/* Put your CSS here */
+.ember-application {
+    margin: 20px;
+}
+* {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-transform: none !important;
+  }
+  #date-map {
+  	width: 400px;
+  	height: 400px;
+  }
+
+  /* Fixes weird emberui bug */
+.eui-input.eui-medium input,
+.eui-input.eui-medium textarea,
+.eui-textarea.eui-medium input,
+.eui-textarea.eui-medium textarea
+{
+    line-height: 10px;
+}
+
+/*.eui-month .eui-day, */
+.eui-month .eui-slot
+{
+   /* -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;*/
+            width: 40px;
+}
