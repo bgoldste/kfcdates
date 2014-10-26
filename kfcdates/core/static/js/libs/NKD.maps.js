@@ -97,7 +97,7 @@ function SetupDrawingMap(elm, drawingModes, map) {
             drawingModes: drawingModes
         },
         polygonOptions: {
-            fillColor: '#02538a',
+            fillColor: '#777',
             tr: 0.5,
             fillOpacity: 0.5,
             strokeWeight: 1,
@@ -106,7 +106,7 @@ function SetupDrawingMap(elm, drawingModes, map) {
             editable: true
         },
         markerOptions: {
-            fillColor: '#02538a',
+            fillColor: '#77777',
             clickable: true,
             zIndex: 1,
             draggable: true
@@ -393,7 +393,8 @@ function AddMarker(map, location, editable, popupText, id) {
             map: map,
             draggable: editable,
             title: popupText,
-            type: 'marker'
+            type: 'marker',
+            icon: '/static/img/leg.png',
         });
         marker.uniqueid = id;
         map.mapOverlays.push(marker);
