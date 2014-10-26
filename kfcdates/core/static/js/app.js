@@ -235,7 +235,7 @@ App.SetupController = Ember.ObjectController.extend({
 	actions: {
 		invite: function () {
 			this.get('model.slot').save();
-			//this.transitionToRoute('waiting');
+			this.transitionToRoute('waiting');
 		}
 	}
 
@@ -245,6 +245,15 @@ App.SetupController = Ember.ObjectController.extend({
 App.ProposalRoute = Ember.Route.extend({
 	model: function() {
 		return this.store.find('proposal');
+	}
+});
+
+App.ProposalController = Ember.ObjectController.extend({
+	actions: {
+		acceptDate: function () {
+			
+			this.transitionTo('confirmation'); 
+		}
 	}
 });
 

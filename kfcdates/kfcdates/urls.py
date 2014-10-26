@@ -15,6 +15,7 @@ urlpatterns = patterns('',
 	url(r'^users', 'core.views.test_users', name='home'),
 	url(r'^proposals', 'core.views.proposals', name='home'),
     url(r'^slots', 'core.views.slots', name='home'),
+    url(r'^dates', 'core.views.dates', name='home'),
     #Facebook
 
 	url('', include('social.apps.django_app.urls', namespace='social')),
