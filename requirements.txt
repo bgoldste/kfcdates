@@ -4,7 +4,7 @@ South==1.0
 Unidecode==0.04.16
 amqp==1.4.5
 anyjson==0.3.3
-billiard==3.3.0.18
+#billiard==3.3.0.18
 celery==3.1.13
 distribute==0.6.10
 django-tastypie==0.9.16
