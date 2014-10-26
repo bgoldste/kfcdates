@@ -15,7 +15,7 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({
 
 //App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
-App.Store = DS.Store.extend({
+App.ApplicationStore = DS.Store.extend({
   revision: 11,
   url: "http://localhost:8000"
 });
