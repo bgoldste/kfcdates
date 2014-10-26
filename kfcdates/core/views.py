@@ -157,11 +157,15 @@ def index(request):
 def test_users(request):
 
     params = request.GET.get('id', None)
-    print "PARAMS + " , params  
-    print "UserID", request.user.id
+    #print "PARAMS + " , params  
+    #print "UserID", request.user.id
 
-
-
+    if (params == None):
+        try: 
+            params = request.path.split("/")[2]
+        except:
+            pass
+    print params       
     
     if (params != None):
         try:
@@ -169,6 +173,11 @@ def test_users(request):
             if o:
                 o['_id'] = str(o['_id'])
                 c = {'users': [o]}
+            else:
+                o = db.users.find_one({"facebookID": str(params) });
+                if o:
+                    o['_id'] = str(o['_id'])
+                    c = {'user': o}
         except ValueError:
             try:
                 o = db.users.find_one({"id": int(request.user.id) });
