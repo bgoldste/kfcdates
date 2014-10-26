@@ -1,0 +1,3 @@
+
+
+web: gunicorn kfcdates.wsgi --log-file - --pythonpath=./kfcdates 
