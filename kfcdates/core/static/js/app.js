@@ -291,8 +291,8 @@ App.ConfirmationRoute = Ember.Route.extend({
 	afterModel: function(model) {
 		if (model.dates && model.dates.content && model.dates.content.length > 0)
 			model.date = model.dates.get('firstObject');
-		//else
-		//	this.transitionTo('profile'); 
+		else
+			setTimeout("location.reload(true);", 1500);
 	}
 });
 
