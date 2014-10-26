@@ -132,13 +132,21 @@ def create_date(request):
     try:
         for a in request.user.social_auth.values():
             if a['provider'] == 'facebook':
+                location_latitude = request.GET.get('locationLatitude', '')
+                location_longitude = request.GET.get('locationLongitude', '')
+                address = request.GET.get('address', '')
+                date = request.GET.get('date', '')
                 time = request.GET.get('time', '')
-                location = request.GET.get('location', '')
 
                 new_date = {
+                                "locationLatitude": location_latitude,
+                                "locationLongitude": location_longitude,
+                                "address": address
                                 "buyer": a['uid'],
+                                "date": date,
                                 "time": time,
-                                "location": location
+                                "state": "new",
+                                "buyer": a['uid'],
                             }
                 date_id = db.dates.insert(new_date)
                 kfc_date = db.dates.find_one({"_id" : date_id})
