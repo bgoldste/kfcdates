@@ -11,7 +11,8 @@ urlpatterns = patterns('',
     url(r'^$', 'core.views.login', name='login'),
     url(r'^logout/$', 'core.views.logout', name='logout'),
     url(r'^home/$', 'core.views.home', name='home'),
-
+	url(r'^index/$', 'core.views.index', name='home'),
+	url(r'^users/1', 'core.views.test_users', name='home'),
     #Facebook
 
 	url('', include('social.apps.django_app.urls', namespace='social')),
