@@ -66,16 +66,19 @@
    <p class= 'text-center'>
    {{#if user.isBuyer}}
     <button class = 'btn btn-success'>Buyin' dat chicken</button>
-    <button class = 'btn btn-danger'{{action 'makeRecipient'}}>Eatin' dat chicken</button>
-    
+    <button class = 'btn btn-danger' {{action 'makeRecipient'}}>Eatin' dat chicken</button>
+    <br><br>
+    {{#link-to 'setup' class="btn btn-primary center-block"}}Next{{/link-to}}
    {{else}}
     <button class = 'btn btn-danger'{{action 'makeBuyer'}}>Buyin' dat chicken</button>
     <button class = 'btn btn-success'>Eatin' dat chicken</button>
+     <br><br>
+     {{#link-to 'proposal' class="btn btn-primary center-block"}}Next{{/link-to}}
       {{/if}}
      </p>
-     <br><br>
+
       
-    {{#link-to 'proposal' class="btn btn-primary center-block"}}Next{{/link-to}}
+
 
  
  
@@ -149,8 +152,10 @@
       <p><strong style="color:red;">{{b.firstname}} {{b.lastname}} </strong>/{{b.p}}
         {{date}} <span class="glyphicon glyphicon-share-alt"></span>{{time}}</p>
       {{/each}}
+    	<button class = 'btn btn-success' {{action 'acceptDate' id}}>Eat dat chicken</button>
       </li>
     {{/each}}
+
     </ul>
   </script>
 
