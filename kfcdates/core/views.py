@@ -12,6 +12,7 @@ from datetime import datetime
 import requests
 
 from django.contrib.auth import logout as auth_logout
+from django.core.mail import send_mail
 
 db = Connection(
     host=getattr(settings, "MONGODB_HOST", None),
@@ -293,6 +294,15 @@ def dates(request):
                 data = json.dumps({'dates' : [kfc_date]})
                 return HttpResponse(data, mimetype='application/json')
     return HttpResponse(status=200);
+
+
+@csrf_exempt
+def confirmation_email(subject, message, buyer_facebook_id, seller_facebook_id):
+    buyer = db.users.find_one({"facebookID": buyer_facebook_id })
+    seller = db.users.find_one({"facebookID": seller_facebook_id })
+
+    send_mail(subject, message, 'dates@kfc.fastfooddates.com', [buyer['email'], seller['email']])
+
 
 
 
