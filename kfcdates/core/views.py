@@ -42,11 +42,25 @@ def login(request):
                 
                     mongo_user = db.users.find_one({"uid": a['uid'] })
                     if not mongo_user:
+                        gender = get_user_gender(request.user.first_name)
+                        is_buyer = False,
+                        is_recipient = True
+                        if gender == 'male':
+                            is_buyer = True
+                            is_recipient = False
+
                         new_mongo_user = {
-                            "uid": a['uid'],
-                            "name": request.user.first_name + " " + request.user.last_name[0] + ".",
-                            "pic": get_user_pic(a['uid']),
-                            "gender": get_user_gender(request.user.first_name)
+                            "id": request.user.id,
+                            "photoURL": get_user_pic(a['uid']),
+                            "username": request.user.first_name + " " + request.user.last_name[0] + ".",
+                            "firstname": request.user.first_name,
+                            "lastname": request.user.last_name,
+                            "facebookID": a['uid'],
+                            "locationLatitude": 0,
+                            "locationLongitude": 0,
+                            "isBuyer": is_buyer,
+                            "isRecipient": is_recipient,
+                            "email": request.user.email
                         }
                         db.users.insert(new_mongo_user)
 
