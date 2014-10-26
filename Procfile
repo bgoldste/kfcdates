@@ -1,0 +1,1 @@
+web: gunicorn kfcdates.wsgi --log-file -
