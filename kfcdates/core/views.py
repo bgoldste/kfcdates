@@ -76,6 +76,39 @@ def home(request):
 
     return render_to_response('core/home.html', context)
 
+def get_dates(request):
+    context = RequestContext(request)
+
+    kfc_dates = []
+
+    try:
+        for a in request.user.social_auth.values():
+            if a['provider'] == 'facebook':
+                kfc_dates_iterator = db.dates.find({"buyer" : a['uid']})
+                for kfc_date in kfc_dates_iterator:
+                    kfc_dates.append(kfc_date)
+
+    except AttributeError:
+        pass
+
+    data = json.dumps(kfc_dates)
+
+    return HttpResponse(data, mimetype='application/json')
+
+
+def get_random_dates(request):
+    context = RequestContext(request)
+
+    kfc_dates = []
+
+    kfc_dates_iterator = db.dates.find({})
+    for kfc_date in kfc_dates_iterator:
+        kfc_dates.append(kfc_date)
+
+    data = json.dumps(kfc_dates)
+
+    return HttpResponse(data, mimetype='application/json')
+
 
 def create_date(request):
     context = RequestContext(request)
@@ -95,6 +128,28 @@ def create_date(request):
                             }
                 date_id = db.dates.insert(new_date)
                 kfc_date = db.dates.find_one({"_id" : date_id})
+
+
+    except AttributeError:
+        pass
+
+    data = json.dumps(kfc_date)
+
+    return HttpResponse(data, mimetype='application/json')
+
+def join_date(request):
+    context = RequestContext(request)
+
+    kfc_date = None
+
+    try:
+        for a in request.user.social_auth.values():
+            if a['provider'] == 'facebook':
+                date_id = request.GET.get('date_id', '')
+                kfc_date = db.dates.find_one({"_id" : date_id})
+
+                kfc_date['recipient'] = a['uid']
+                db.dates.save(kfc_date)
 
 
     except AttributeError:
