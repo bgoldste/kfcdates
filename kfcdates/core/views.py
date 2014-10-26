@@ -186,11 +186,39 @@ def index(request):
     return render_to_response('core/index.html', context)
 
 
-def test_users(request):
+def test_users(request, user_id):
 
     params = request.GET.get('id', None)
-    print "PARAMS + " , params 
-    o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
+    #print "PARAMS + " , user_id,   
+
+    
+
+    o = db.users.find_one({"id": int(user_id) })
+    if o:
+        o['_id'] = str(o['_id'])
+    
+    #o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
+    a = [o,]
+    c = {'user': o}
+
+
+    data = json.dumps(c)
+
+    return HttpResponse(data, mimetype='application/json')
+
+
+def proposals(request, proposals):
+    print proposals
+    params = request.GET.get('id', None)
+    #print "PARAMS + " , user_id,   
+
+    
+
+    o = db.dates.find_one({"id": int(proposals) })
+    if o:
+        o['_id'] = str(o['_id'])
+    
+    #o = { 'id': '1', 'photoURL': "http://x.com/x.jpg", 'username': 'dioptre', 'firstname': 'Andy', 'lastname': 'G', 'facebookID': 'mrdioptre', 'locationLatitude': '61.4', 'locationLongitude': '120.2', 'isBuyer': 'true', 'isRecipient': 'false', 'email': 'dioptre@gmail.com', 'meetups': [] },
     a = [o,]
     c = {'user': o}
 
