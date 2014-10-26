@@ -114,20 +114,32 @@
 
   <script type="text/x-handlebars" data-template-name="confirmation">
     <h3 class= 'text-center' style='color:grey;'>You're Set for your Date!</h3>
-    {{date.date}} @ {{date.time}} 
-    <br/><br/>
-    {{date.address}}
+    
+
+    <p class = 'text-center' style:"color:#8099E6"> Meet up at {{date.address}} on {{date.date}} @ {{date.time}} </p>
+    <div class = "container center-block"> <div class ='row'>
      {{#each b in date.buyer}}
+     <div class ='col-xs-4'>
      	<img style = "height:60px; width: 60:px;" {{bind-attr src=b.photoURL}}/>
      	{{b.firstname}}
+      </div>
      {{/each}}
+      <div class ='col-xs-4'>
+      <img style = "height:60px; width: 60:px;" src="static/img/heart.png"/>
+      </div>
      {{#each b in date.recipient}}
+      <div class ='col-xs-4'>
      	<img style = "height:60px; width: 60:px;" {{bind-attr src=b.photoURL}}/>
-     	{{b.firstname}}
+      {{b.firstname}}
+      </div>
+     	
      {{/each}}
+     </div>
+     </div>
     <img class ='center-block' src ="static/img/confirmation.png">
     <br><br>
-    <h2 class ='text-center' style="color:red;">Yum!</h2>
+    <h2 class ='text-center' style="color:green;">Yum!</h2>
+    <button class = 'btn btn-danger' {{action 'cancelDate' id}}>Cancel :(</button>
   </script>
 
   <script type="text/x-handlebars" data-template-name="date">
