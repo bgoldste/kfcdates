@@ -71,7 +71,7 @@ def login(request):
                     context['user'] = request.user.social_auth.values
                     
                     context['pic'] = uid #request.get("http://graph.facebook.com/%s/picture" % uid)
-
+                    return render_to_response('core/index.html', context)
                     return redirect('home')
         
                 
