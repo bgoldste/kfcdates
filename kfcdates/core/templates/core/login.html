@@ -37,29 +37,32 @@
     <h4 class = 'text-center'>Sign in and get jammin'</h4>
 
 
-
+    <br>
 
     <div class = "button-row center-block">
       <div class = "row" style = "height:56px;">
-        <div class="col-xs-5 padding-right:0;">
+        <div class="col-xs-6 padding-right:0;">
     <a href = "{% url 'social:begin' 'facebook' %}?next={{ request.path }}" ><img class="fb" style = " height:60px; float:right;" src = "/static/img/fb.jpg" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}"></a>  
 
   </div>
 
   <form action="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
     
-  <div class = "col-xs-7" style = "padding-left:0;">
+  <div class = "col-xs-6" style = "padding-left:0;">
     <a  href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" style= "height:60px; float:left; padding:12px; font-size:22px; " class="btn btn-danger" >Let's Eat!</a>
 
   
 </form>
+
+
   </div>
   </div>
   </div>
-
-
-
-
+<h3 class= 'text-center'>The best way to meet people, at everyone's favorite fast food restaurant.</h3>
+<br>
+<img class ="image-square center-block" src='/static/img/colonel.jpeg'/>
+<br>
+<h3 class= 'text-center' style="color:red;">"How I meet all my 'special' friends"<b> - The colonel</b></h3>
 
 
 
