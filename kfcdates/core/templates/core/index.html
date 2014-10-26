@@ -98,7 +98,7 @@
     {{eui-selectdate style="default" placeholder="Select a date" value=slot.moment}}
     {{eui-select placeholder='Select a time' options=times value=slot.time}}
    
-    {{eui-button label='invite' action='invite' style='primary' }}
+    {{eui-button label='invite' action='invite' style='primary' disabled=isDisabled}}
   </script>
 
 
@@ -133,12 +133,21 @@
 
   <script type="text/x-handlebars" data-template-name="proposal">
    <h3 class='text-center'> My dates</h3>
+    <ul class = 'list-group'>
     {{#each}}
-      {{date}} {{time}}
+ <li class ='list-group-item'> 
+
+    
+     
       {{#each b in buyer}}
-        {{b.firstname}} {{b.lastname}}
+      
+<img style = "height:60px; width: 60:px;" {{bind-attr src=b.photoURL}}/>
+      <p><strong style="color:red;">{{b.firstname}} {{b.lastname}} </strong>/{{b.p}}
+        {{date}} <span class="glyphicon glyphicon-share-alt"></span>{{time}}</p>
       {{/each}}
+      </li>
     {{/each}}
+    </ul>
   </script>
 
   <script type="text/x-handlebars" data-template-name="template">
