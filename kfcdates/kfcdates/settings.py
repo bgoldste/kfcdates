@@ -121,7 +121,7 @@ ROOT_URLCONF = 'kfcdates.urls'
 #need to config for this project
 
 # PyMongo config
-MONGODB_HOST = '1ds047940.mongolab.com'
+MONGODB_HOST = 'ds047940.mongolab.com'
 MONGODB_PORT = 47940
 MONGODB_DATABASE = "kfcdates"
 MONGODB_USERNAME = "kfcdates"
