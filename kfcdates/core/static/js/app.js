@@ -10,14 +10,14 @@ Ember.Application.initializer({
 App = Ember.Application.create();
 
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://localhost:8000'
+    host: 'http://kfc.fastfooddates.com'
 });
 
 //App.ApplicationAdapter = DS.FixtureAdapter.extend({});
 
 App.ApplicationStore = DS.Store.extend({
   revision: 11,
-  url: "http://localhost:8000"
+  url: "http://kfc.fastfooddates.com"
 });
 
 
